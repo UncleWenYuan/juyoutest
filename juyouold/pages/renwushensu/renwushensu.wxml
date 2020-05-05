@@ -1,0 +1,16 @@
+<view class="columnPage">
+  <view class="shensu">输入申诉内容</view>
+  <view class="input">
+    <textarea maxlength="100"  bindinput="getValueLength" class="textArea" placeholder=""></textarea>
+  </view>
+  <view class="wordsCount">
+    <view class="zishu">{{currentWordNumber}}/100</view>
+    
+  </view>
+    <view class="queren">
+      <view class="background" bindtap="fabu">
+        <view class="fabu">完 成</view>
+      </view>
+    </view>
+
+</view>

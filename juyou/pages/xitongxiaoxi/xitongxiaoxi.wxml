@@ -1,0 +1,174 @@
+
+
+  <view class="tongzhi botmar" wx:for="{{range}}">
+    <view class="shangban">
+      <view class="bg">
+        <view class="shijian">今天 33:33</view>
+      </view>
+    </view>
+    <view class="xiaban">
+      <view class="shang">
+        <view class="tongzhibiaoti">
+        {{item.title}}
+        </view>
+        <view class="erlingyijiu">
+        {{item.createTime}}
+        </view>
+      </view>
+      <view class="zhong">
+        <image src="{{item.imageUrl}}" class="banner" wx:if="{{item.imageUrl!=null}}"></image>
+        <view class="xiaoxineirong">
+          {{item.content}}
+        </view>
+      </view>
+      <view class="xia" >
+        <view class="chakanxiangqing">查看详情</view>
+        <image class="jiantou"src="/images/箭头.png"></image>
+      </view>
+    </view>
+  </view>
+  
+
+
+
+  <!-- <view class="gonggao botmar">
+    <view class="shangban">
+      <view class="bg">
+        <view class="shijian">今天 33:33</view>
+      </view>
+    </view>
+
+    <view class="xiaban2">
+      <view class="shang">
+        <view class="tongzhibiaoti guanfanggonggao">
+        通知标题
+        </view>
+        <view class="erlingyijiu">
+        2019-10-10
+        </view>
+      </view>
+      <view class="neirong">
+        消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容
+      </view>
+      
+      
+    </view>
+  </view>
+
+
+
+
+  <view class="tongzhi botmar">
+    <view class="shangban">
+      <view class="bg">
+        <view class="shijian">今天 33:33</view>
+      </view>
+    </view>
+    <view class="xiaban">
+      <view class="shang">
+        <view class="tongzhibiaoti">
+        通知标题
+        </view>
+        <view class="erlingyijiu">
+        2019-10-10
+        </view>
+      </view>
+      <view class="zhong">
+        <image src="/images/banner.png" class="banner"></image>
+        <view class="xiaoxineirong">
+          消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容
+        </view>
+      </view>
+      <view class="xia">
+        <view class="chakanxiangqing">查看详情</view>
+        <image class="jiantou"src="/images/箭头.png"></image>
+      </view>
+    </view>
+  </view>
+  
+
+
+
+  <view class="gonggao botmar">
+    <view class="shangban">
+      <view class="bg">
+        <view class="shijian">今天 33:33</view>
+      </view>
+    </view>
+
+    <view class="xiaban2">
+      <view class="shang">
+        <view class="tongzhibiaoti guanfanggonggao">
+        通知标题
+        </view>
+        <view class="erlingyijiu">
+        2019-10-10
+        </view>
+      </view>
+      <view class="neirong">
+        消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容
+      </view>
+      
+      
+    </view>
+  </view>
+
+
+
+
+  <view class="tongzhi botmar">
+    <view class="shangban">
+      <view class="bg">
+        <view class="shijian">今天 33:33</view>
+      </view>
+    </view>
+    <view class="xiaban">
+      <view class="shang">
+        <view class="tongzhibiaoti">
+        通知标题
+        </view>
+        <view class="erlingyijiu">
+        2019-10-10
+        </view>
+      </view>
+      <view class="zhong">
+        <image src="/images/banner.png" class="banner"></image>
+        <view class="xiaoxineirong">
+          消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容
+        </view>
+      </view>
+      <view class="xia">
+        <view class="chakanxiangqing">查看详情</view>
+        <image class="jiantou"src="/images/箭头.png"></image>
+      </view>
+    </view>
+  </view>
+  
+
+
+
+  <view class="gonggao botmar">
+    <view class="shangban">
+      <view class="bg">
+        <view class="shijian">今天 33:33</view>
+      </view>
+    </view>
+
+    <view class="xiaban2">
+      <view class="shang">
+        <view class="tongzhibiaoti guanfanggonggao">
+        通知标题
+        </view>
+        <view class="erlingyijiu">
+        2019-10-10
+        </view>
+      </view>
+      <view class="neirong">
+        消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容
+      </view>
+      
+      
+    </view>
+  </view>
+
+ -->

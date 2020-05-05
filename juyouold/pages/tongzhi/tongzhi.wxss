@@ -1,0 +1,271 @@
+page{
+  background-color: #F0F0F0;
+}
+
+.swiper-tab {
+ 
+
+
+width: 100%;
+height:75rpx;
+margin-top: 20rpx;
+
+ border-bottom: 1rpx solid #777;
+ background-color: white;
+
+ display: flex;
+
+flex-direction: row;
+ justify-content:center;
+ align-items: center;
+ 
+}
+.section{
+  display: flex;
+ width: 80%;
+flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+}
+ 
+.tab-item {
+ 
+  width: 20%;
+
+  height: 68rpx;
+  text-align: center;
+  
+  font-size: 26rpx;
+  /* margin-top: 15rpx;
+  margin-bottom: 20rpx; */
+  color: rgb(0, 0, 0);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+ 
+ .on {
+
+  color: #28A9FA;
+  border-bottom: 5rpx solid #28A9FA;
+  
+
+}
+.swiper {
+ 
+  width: 100%;
+  background-color: #F0F0F0;
+
+ 
+}
+image{
+  width: 50rpx;
+  height: 48rpx;
+
+}
+.columnPage{
+  width: 100%;
+  background-color: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.shang{
+  height: 100rpx;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+
+}
+
+.zuoban{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 80rpx;
+  align-items: center;
+
+}
+.xitongxiaoxi{
+  margin-left: 15rpx;
+}
+.youban{
+  margin-right: 50rpx;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.hongdian{
+  width: 35rpx;
+  height: 33rpx;
+}
+.xia{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.erfenzhiyi{
+  margin-bottom: 20rpx;
+  width: 100%;
+  height: 200rpx;
+  background-color: white;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+.swiperItem{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-end;
+
+}
+.shangban{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  
+  font-size: 26rpx;
+  
+  
+}
+.shangban2{
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 30rpx;
+  
+  
+}
+.zuiyijiangnan{
+  margin-left: 35rpx;
+  margin-top:20rpx;
+}
+.zuiyijiangnan2{
+  margin-top:20rpx;
+  width: 90%;
+}
+.xiaban{
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.xiaban2{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.zuobanbufen{
+  width: 20%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.touxiang{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+
+.youbanbufen{
+  margin-top: 20rpx;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+ width: 90%;
+ height: 90%;
+}
+.youbanbufen2{
+  margin-top: 20rpx;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 90%;
+ height: 90%;
+}
+.zhangdajiehang{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.pinglunghang{
+  height: 50%;
+  width: 100%;
+  font-size: 26rpx;
+  letter-spacing: 1rpx;
+  margin-top: 1rpx;
+  
+}
+
+.zhangdajiepinglun{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+align-items: center;
+font-size: 26rpx;
+letter-spacing: 1rpx;
+font-weight: 500;
+}
+.kongge{
+  margin-left: 20rpx;
+}
+.erlingyijiu{
+  margin-right: 30rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+align-items: center;
+font-size: 26rpx;
+color: #999999;
+}
+.erlingyijiu2{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+align-items: center;
+font-size: 26rpx;
+color: #999999;
+}

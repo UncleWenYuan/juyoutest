@@ -1,0 +1,109 @@
+<view class="columnPage">
+
+  <view class="shang">
+    <view class="zuo">
+      <image src="{{userInfo.userInfo.avatarImageUrl}}" class="touxiang"></image>
+       <image src="/images/性别图标女.png" wx:if="{{userInfo.userInfo.gender==2}}" class="xingbie"></image>
+        <image src="/images/性别图标男.png" wx:if="{{userInfo.userInfo.gender==1}}" class="xingbie"></image>
+    </view>
+    <view class="you">
+      <view class="shangban">
+        <view class="zuoban">
+          <view class="jiujiujiu">{{userInfo.joinTaskNumber}}</view>
+          <view class="canyuderenwu">参与的任务</view>
+        </view>
+        <view class="youban">
+          <view class="jiujiujiu">{{userInfo.releaseTaskNumber}}</view>
+          <view class="canyuderenwu">发布的任务</view>
+        </view>
+      </view>
+      <view class="xiaban">
+        <view class="bg" style="background-color: {{color}};color:{{fontcolor}}" bindtap="bianjiziliao">
+          <view class="dianzan">{{wenzi}}</view>
+        </view>
+      </view>
+    </view>
+  
+  </view>
+  <view class="xia">
+    <view class="yi gen">
+      <view class="zuobanbufen">
+        <view class="shangbanbufen">居住地
+        </view>
+        <view class="xiabanbufen">{{userInfo.address.provinceName}}-{{userInfo.address.cityName}}-{{userInfo.address.countyName}}-{{userInfo.address.detailInfo}}
+        </view> 
+      </view>
+      <view class="youbanbufen">
+        <image class="jiantou" src="/images/箭头.png"></image>
+      </view>
+      
+    </view>
+    <view class="er">
+      <view class="zuobanbufen">
+        <view class="shangbanbufen">爱好
+        </view>
+        <view class="xiabanbufen2">
+          <view class="section" wx:for="{{userInfo.hobbyNameList}}" wx:key="key" wx:if="{{index<5}}">
+            <view class="zi">{{item}}</view>
+          </view>
+        </view> 
+      </view>
+      <view class="youbanbufen">
+        <image class="jiantou" src="/images/箭头.png"></image>
+      </view>
+      
+    </view>
+    <view class="san gen">
+     <view class="zuobanbufen">
+        <view class="shangbanbufen">特长
+        </view>
+        <view class="xiabanbufen2">
+          <view class="section" wx:for="{{userInfo.specialityNameList}}" wx:key="key" wx:if="{{index<5}}">
+            <view class="zi">{{item}}</view>
+          </view>
+        </view> 
+      </view>
+      <view class="youbanbufen">
+        <image class="jiantou" src="/images/箭头.png"></image>
+      </view>
+      
+    </view>
+    <view class="si gen">
+      <view class="zuobanbufen">
+        <view class="shangbanbufen">职业
+        </view>
+        <view class="xiabanbufen">{{userInfo.occupationName}}
+        </view> 
+      </view>
+      <view class="youbanbufen">
+        <image class="jiantou" src="/images/箭头.png"></image>
+      </view>
+      
+    </view>
+    <view class="wu gen">
+      <view class="zuobanbufen">
+        <view class="shangbanbufen">教育
+        </view>
+        <view class="xiabanbufen">{{userInfo.education.educationName}}-{{userInfo.education.school}}
+        </view> 
+      </view>
+      <view class="youbanbufen">
+        <image class="jiantou" src="/images/箭头.png"></image>
+      </view>
+      
+    </view>
+    <view class="liu gen">
+      <view class="zuobanbufen">
+        <view class="shangbanbufen">群体
+        </view>
+        <view class="xiabanbufen">{{userInfo.group.faceName}}-{{userInfo.group.specialName}}
+        </view> 
+      </view>
+      <view class="youbanbufen">
+        <image class="jiantou" src="/images/箭头.png"></image>
+      </view>
+      
+    </view>
+  </view>
+
+</view>

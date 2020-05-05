@@ -1,0 +1,253 @@
+<view class="columnPage">
+  <view class="shang">
+    <view class="tupianhang">
+      <image class="tupianwei" src="{{imageUrl}}" bindtap="tapImage"></image>
+    
+    </view>
+    <view class="qingshuhang">
+      <view class="input" style=" margin-left:30rpx;">
+        <input maxlength="10" placeholder="请输入活动主题" bindinput="inputzhuti" bindconfirm="confirmzhuti"></input>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="zhong">
+    <view class="liufenzhiyi">
+      <view class="zhongjian">
+        <picker bindchange="bindDateChange1"  mode="date" class="pick" value="{{date1}}">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">活动开始日期</text>
+            </view> 
+            <view class="youban {{on1==0 ? 'color' : ''}}" >
+              <text>{{date1}}</text>
+            </view>
+          </view>
+      </picker>
+      </view>
+    </view>
+
+    <view class="liufenzhiyi">
+      <view class="zhongjian">
+        <picker bindchange="timePicker1"  mode="time" class="pick" bindchange="time1tap">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">活动开始时间</text>
+            </view> 
+            <view class="youban {{onTime1==0 ? 'color' : ''}}" >
+              <text>{{time1}}</text>
+            </view>
+          </view>
+      </picker>
+      </view>
+    </view>
+
+    <view class="liufenzhiyi">
+      <view class="zhongjian">
+        <picker bindchange="bindDateChange2"  mode="date" class="pick" value="{{date2}}">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">活动结束日期</text>
+            </view> 
+            <view class="youban {{on2==0 ? 'color' : ''}}" >
+              <text>{{date2}}</text>
+            </view>
+          </view>
+      </picker>
+      </view>
+    </view>
+    
+    <view class="liufenzhiyi">
+      <view class="zhongjian">
+        <picker bindchange="timePicker2"  mode="time" class="pick"  bindchange="time2tap">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">活动开始时间</text>
+            </view> 
+            <view class="youban {{onTime2==0 ? 'color' : ''}}" >
+              <text>{{time2}}</text>
+            </view>
+          </view>
+      </picker>
+      </view>
+    </view>
+
+
+    <view class="liufenzhiyi">
+      <view class="zhongjian">
+        <picker bindchange="bindDateChange3"  mode="date" class="pick" value="{{date3}}">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">报名截止日期</text>
+            </view> 
+            <view class="youban {{on3==0 ? 'color' : ''}}" >
+              <text>{{date3}}</text>
+            </view>
+          </view>
+      </picker>
+      </view>
+    </view>
+    <view class="liufenzhiyi">
+
+      <view class="zhongjian">
+        <view class="pick">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">人数</text>
+            </view> 
+            <view class="youban">
+              <input placeholder="人" style="text-align:right" maxlength="5" type="number" class="ziti" bindinput="renshuInput"></input>
+              
+              <view wx:if="{{on4==1}}" class="margin">人</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="liufenzhiyi">
+
+      <view class="zhongjian">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{rangeArray}}" range-key="name">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">活动类型</text>
+            </view> 
+            <view class="youban {{on7==0 ? 'color' : ''}}" >
+              <text>{{rangeArray[1][multiIndex[1]].name}}</text>
+            </view>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="liufenzhiyi">
+      <view class="zhongjian">
+        <view class="pick">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">奖励金标准</text>
+            </view> 
+            <view class="youban" >
+              <input placeholder="友币/人" style="text-align:right" type="number" maxlength="5" class="ziti" bindinput="jianglijinInput"></input>
+              <view wx:if="{{on5==1}}" class="margin">友币/人</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="liufenzhiyi">
+      <view class="zhongjian">
+        <view  class="pick">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">奖励金总预算</text>
+            </view> 
+            <view class="youban {{((on4==0)||(on5==0)) ? 'color' : ''}}" >
+              <text>{{renshu3}} 友币</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    
+
+    <view class="liufenzhiyi">
+
+      <view class="zhongjian">
+        <picker mode="selector" bindchange="faburenPicker"  value="{{faburenindex}}" range="{{faburenrange}}" range-key="companyName">
+          <view class="section">
+            <view class="zuoban">
+              <text class="xingbie">发布人信息</text>
+            </view> 
+            <view class="youban {{onfaburen==0 ? 'color' : ''}}" >
+              <text>{{faburenrange[faburenindex].companyName}}</text>
+            </view>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+
+
+    
+    
+  </view>
+
+  <view class="zhong2">
+  
+    <view class="liufenzhiyi2">
+      <view bindtap="ditu" class="pick2" >
+        <view class="section2">
+          <view class="zuoban2">
+            <image src="/images/星号.png" class="image2"></image>
+            <text class="xingbie2">活动地点</text>
+          </view>  
+          
+          <view class="youban2 {{dituxuan==0 ? 'color2' : ''}}" >
+            
+            <text>{{address}}</text>
+            <image class="youjian2" src="/images/箭头.png"></image>
+            
+          </view>
+        </view>
+
+        
+      </view>
+  </view>
+
+    <view class="liufenzhiyi2">
+      <view  class="pick2" >
+        <view class="section2">
+          <view class="zuoban2">
+            <image src="/images/星号.png" class="image2"></image>
+            <text class="xingbie2">签到范围</text>
+          </view>  
+          
+          <view class="youban2" wx:if="{{address!=''}}">
+            <input placeholder="公里" style="text-align:right" maxlength="5" type="digit" class="juli2" bindinput="qiandaoConfirm"></input>
+            
+              <view wx:if="{{onQiandao==1}}" class="margin2">公里</view>
+            
+          </view>
+        </view>
+
+        
+      </view>
+  </view>
+  </view>
+  
+
+  <view class="xia">
+    <view class="erfenzhiyi">
+      <textarea class="qingshururenwushuoming" placeholder="请输入任务说明" maxlength="100" bindinput="inputshuoming" bindconfirm="confirmshuoming"></textarea>
+    </view>
+    <view class="erfenzhiyi">
+        <view class="tianjiafujian">添加附件 (长按删除)</view>
+        <view class="fujianrow">
+          <image src="/images/加号@3x.png" class="jiahao" bindtap="tianjiafujian"></image>
+          <image  src="/images/文件夹图标@3x.png" class="fujiantubiao" wx:for="{{fujianurlArray}}" bindtap="fujianyulan" data-url="{{item}}" data-index="{{index}}" bindlongtap="fujianshanchu"></image>
+          
+        </view>
+        <view class="fujianrow">
+          <image src="/images/加号@3x.png"class="jiahao" bindtap="tianjiatupian"></image>
+          <image  src="/images/图片图标 @3x.png"class="fujiantubiao" bindlongtap="tupianshanchu" wx:for="{{tupianurlArray}}"  data-url="{{item}}" data-index="{{index}}" bindtap="tupianyulan"></image>
+        </view>
+      </view>
+      
+  </view>
+  
+
+  <view class="xiaxia">
+   
+    <view class="background" bindtap="jixu">
+      <view class="fabu">继 续</view>
+    </view>
+
+
+  
+  </view>
+
+
+</view>

@@ -1,0 +1,153 @@
+.tongzhi{
+  width: 100%;
+  /* border: 1rpx solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  /* margin-bottom: 50rpx; */
+}
+page{
+  width: 100%;
+  
+  background-color: #F0F0F0;
+}
+.shangban{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:100rpx; 
+}
+.bg{
+  width: 148rpx;
+  height: 40rpx;
+  background-color: #999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25rpx;
+}
+.shijian{
+  font-size: 25rpx;
+  color: white;
+  margin-bottom: 3rpx;
+}
+
+.xiaban{
+ width: 93%;
+ background-color: white;
+ border-radius: 20rpx;
+ border: 1rpx solid #999999;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+}
+.shang{
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  
+}
+.tongzhibiaoti{
+  font-size: 28rpx;
+  letter-spacing:2rpx; 
+    margin-left: 30rpx;
+}
+.erlingyijiu{
+  color: #999999;
+  font-size: 25rpx;
+    margin-left: 30rpx;
+}
+.xia{
+  height: 80rpx;
+   width: 90%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   border-top: 1rpx solid #999999;
+  
+}
+.zhong{
+   width: 100%;
+   /* border: 1rpx solid black; */
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: center;
+   font-size: 25rpx;
+}
+.banner{
+  height:350rpx;
+  width: 100%;
+}
+
+.xiaoxineirong{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 27rpx;
+  letter-spacing: 1rpx;
+  width: 93%;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap; 
+}
+
+.chakanxiangqing{
+  color: #28A9FA;
+  font-size: 27rpx;
+   letter-spacing: 1rpx;
+
+  
+}
+
+.jiantou{
+  width: 10rpx;
+  height: 20rpx;
+  margin-bottom: 2rpx;
+  margin-right: 10rpx;
+}
+
+.gonggao{
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.xiaban2{
+ 
+ width: 93%;
+ background-color: white;
+ border-radius: 20rpx;
+ border: 1rpx solid #999999;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.neirong{
+  word-break: break-all;
+  width: 90%;
+  margin-bottom: 60rpx;
+  margin-top: 30rpx;
+  font-size: 27rpx;
+  letter-spacing: 1rpx;
+}
+
+.guanfanggonggao{
+  margin-top: 20rpx;
+}
+.botmar{
+  margin-bottom: 15rpx;
+}

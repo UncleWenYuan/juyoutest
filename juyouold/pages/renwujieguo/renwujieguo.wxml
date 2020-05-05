@@ -1,0 +1,47 @@
+<view class="qingqueren">
+<view class="zi">请确认活动参与人员是否达到活动要求</view>
+</view>
+<view class="margin"></view>
+
+<view class="columnPage" wx:for="{{range}}" wx:key="null" wx:for-index="dijige">
+
+  <view class="part1">
+    <view class="zuoban">
+      <image src="{{item.userInfo.avatarImageUrl}}" class="touxiang"></image>
+      <view class="zhangdajie">{{item.userInfo.nickName}}</view>
+    </view>
+    <view class="youban">
+      <view class="hege" bindtap="hege" data-id="{{item.id}}">合格</view>
+      <view class="buhege" bindtap="buhege" data-id="{{item.id}}">不合格</view>
+    </view>
+  </view>
+
+
+  <view class="part2">{{item.content}}
+  </view>
+
+  <view class="part3">
+   <view class="tupianwei" wx:for="{{item.imageUrlList}}" bindtap="yulan" data-url="{{item.imageUrlList[myInd]}}"  wx:for-index="myInd" data-list="{{range[dijige].imageUrlList}}">
+    <image class="huodongtu" src="{{item}}" ></image>
+   </view>
+ 
+  </view>
+
+  <view class="part4" wx:if="{{item.hasSignIn==true}}">
+    已完成签到
+  </view> 
+  <view class="part4 red" wx:if="{{item.hasSignIn==false}}">
+    未完成签到
+  </view>
+
+</view>
+
+<view class="xiaxia">
+   
+    <view class="background" bindtap="jixu">
+      <view class="fabu">结 算</view>
+    </view>
+
+
+  
+  </view>

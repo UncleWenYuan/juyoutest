@@ -1,0 +1,294 @@
+.xiabanbufen{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+  justify-content: start;
+   
+  
+  
+  
+  
+}
+.wuhu{
+  font-size: 10rpx;
+}
+
+
+.swiper-tab {
+ 
+display: flex;
+ 
+flex-direction: row;
+margin-bottom: 0rpx;
+width: 90%;
+height:60rpx;
+margin-top: 20rpx;
+ justify-content: space-around;
+ border-bottom: 1rpx solid #777;
+ 
+}
+ 
+.tab-item {
+ 
+  width: 20%;
+  height: 90%;
+  
+  text-align: center;
+  
+  font-size: 30rpx;
+  margin-top: 0%;
+  margin-bottom: 0rpx;
+  color: rgb(0, 0, 0);
+ 
+}
+ 
+ .on {
+
+  color: #28A9FA;
+
+}
+.swiper {
+ 
+  width: 100%;
+  background: #FFFFFF;
+ 
+}
+
+.zuixin{ 
+   /* 整个最新里的内容 */
+  display: flex;
+ 
+  flex-direction: column;
+ justify-content: space-around;
+  width: 100%;
+ 
+  align-items: center;
+}
+
+.tishibufen{
+  color: rgb(181, 160, 160);
+width: 100%;
+font-size: 24rpx;
+margin-top: 5rpx;
+text-align: center;
+letter-spacing: 1rpx;
+
+
+}
+.xiajian{
+  margin-top: 5rpx;
+  margin-left: 10rpx;
+  height: 20rpx;
+  width: 25rpx;
+}
+.myText{
+  font-size: 30rpx;
+}
+
+.sanfenzhiyi{
+  
+font-size: 30rpx;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center; 
+  margin-bottom: 10rpx;
+}
+.zuixinneirong{
+  /* 最新里的一半 */
+  width: 90%;
+  height : 380rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 13rpx;
+ 
+  border-bottom: 1rpx solid rgb(168, 167, 167);
+  
+}
+.tupianbufen{
+  width: 100%;
+  height : 270rpx;
+  position: relative;
+  
+ 
+}
+/* .shangceng{
+  
+  z-index: 2;
+  height:60%;
+  width: 60%;
+  margin:2%;
+
+} */
+
+.xiaceng{
+  
+  /* z-index: 1;  */
+   height:100%;
+  width: 100%;
+  border-radius:10rpx;
+}
+
+.waitanhang{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width:100%;
+  font-size: 27rpx;
+ 
+}
+.shiba{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width:25%;
+  font-size: 28rpx;
+}
+.rentubiao{
+    width:27rpx;
+  height:30rpx;
+  margin-top:8rpx;
+  margin-right: 10rpx;
+  }
+.erlinghang{
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25rpx;
+  
+  width:100%;
+  color: grey;
+  
+}
+
+/* .searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left:25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+} */
+.baomingzhuangtai{
+  position: absolute;
+  left:40rpx;
+  top: 25rpx;
+  width: 180rpx;
+  height: 50rpx;
+  z-index: 1;
+}
+.text{
+  font-size: 27rpx;
+  letter-spacing: 1rpx;
+}
+
+.baomingzhuangtai{
+  position: absolute;
+  left:25rpx;
+  top: 20rpx;
+  width: 180rpx;
+  height: 40rpx;
+  z-index: 1;
+  
+
+}
+.neirong{
+  position: absolute;
+  left:0rpx;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 23rpx;
+}
+
+.zuoban{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  color: #28A9FA;
+
+}
+.youban{
+    width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  color: white;
+}
+.jinbi{
+
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.baomingzhuangtai{
+  position: absolute;
+  left:40rpx;
+  top: 20rpx;
+  width: 180rpx;
+  height: 48rpx;
+  z-index: 1;
+  
+
+}
+.neirong{
+  position: absolute;
+  left:0rpx;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 23rpx;
+}
+
+.zuoban{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  color: #28A9FA;
+
+}
+.youban{
+    width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  color: white;
+}
+.jinbi{
+
+  width: 35rpx;
+  height: 35rpx;
+}
+

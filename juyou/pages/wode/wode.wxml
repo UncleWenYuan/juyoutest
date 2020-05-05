@@ -1,0 +1,162 @@
+<view class="pageColumn">
+  <view class="shangban" bindtap="bianjiziliao">
+    <view class="zuoban">
+      <image src="{{touxiangUrl}}" class="touxiang">
+      
+      </image>
+    </view>
+    <view class="youban">
+      <view class="zhanghang">
+
+        <view class="zhangzhenming">{{userInfo.userInfo.nickName}}</view>
+        <image src="/images/性别图标女.png" wx:if="{{userInfo.userInfo.gender==2}}" class="xingbie"></image>
+        <image src="/images/性别图标男.png" wx:if="{{userInfo.userInfo.gender==1}}" class="xingbie"></image>
+      
+      </view>
+      <view class="renzhenghang">
+        <!-- <image src="/images/无认证.png" wx:if="{{isRenzheng==0}}" class="renzheng">312</image>
+        <image src="/images/已认证.png" wx:if="{{isRenzheng==1}}" class="renzheng"></image> -->
+        <view style="color:white; margin-left:5rpx;font-size: 25rpx;" >ID: {{userInfo.userInfo.userId}}</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="xiaban"> 
+    <view class="shang">
+
+      <view class="section" bindtap="shimingTap">  
+        <view class="zuo">
+          <view class="icon">
+            <image src="/images/实名认证@3x.png" class="shiming"></image>
+          </view>
+          
+          <view class="shimingzi">实名认证</view>
+        </view>
+        <view class="you">
+          <view class="yirenzheng" wx:if="{{isGerenrenzheng==1}}">已认证</view>
+          <view class="yirenzheng" wx:if="{{isGerenrenzheng==0}}">未认证</view>
+          <view class="icon">
+            <image src="/images/箭头.png" class="jiantou"></image>
+          </view>
+          
+          
+        </view>
+      </view>
+
+      <view class="section" bindtap="qiyeTap">  
+        <view class="zuo">
+          <view class="icon">
+            <image src="/images/企业资料@3x.png" class="shiming"></image>
+          </view>
+          
+          <view class="shimingzi">企业认证</view>
+        </view>
+        <view class="you">
+          <view class="yirenzheng" wx:if="{{isQiyerenzheng==1}}">已认证</view>
+          <view class="yirenzheng" wx:if="{{isQiyerenzheng==0}}">未认证</view>
+          <view class="icon">
+            <image src="/images/箭头.png" class="jiantou"></image>
+          </view>
+          
+          
+        </view>
+      </view>
+    </view>
+
+    <view class="zhong">
+      <view class="section" bindtap="wodeTap">  
+        <view class="zuo">
+          <view class="icon">
+            <image src="/images/wodeqianbao.png" class="shiming suo"></image>
+          </view>
+          
+          <view class="shimingzi">我的钱包</view>
+        </view>
+        <view class="you">
+          <view class="yirenzheng">{{number}} 友币</view>
+          <view class="icon">
+            <image src="/images/箭头.png" class="jiantou"></image>
+          </view>
+          
+          
+        </view>
+      </view>
+      
+      <view class="section" bindtap="zhangdanTap">  
+        <view class="zuo">
+          <view class="icon">
+            <image src="/images/zhangdan.png" class="shiming"></image>
+          </view>
+          
+          <view class="shimingzi">账单明细</view>
+        </view>
+        <view class="you">
+          <view class="yirenzheng"> </view>
+          <view class="icon">
+            <image src="/images/箭头.png" class="jiantou"></image>
+          </view>
+          
+          
+        </view>
+      </view>
+
+      <view bindtap="tixianTap" class="section">  
+        <view class="zuo">
+          <view class="icon">
+            <image src="/images/tixian.png" class="shiming"></image>
+          </view>
+          
+          <view class="shimingzi">提现</view>
+        </view>
+        <view class="you">
+          <view class="yirenzheng"> </view>
+          <view class="icon">
+            <image src="/images/箭头.png" class="jiantou"></image>
+          </view>
+          
+          
+        </view>
+      </view>
+    </view>
+
+
+    <view class="xia">
+      <view bindtap="renwuTap" class="section" >  
+        <view class="zuo">
+          <view class="icon">
+            <image src="/images/renwushensu.png" class="shiming"></image>
+          </view>
+          
+          <view class="shimingzi">任务申诉</view>
+        </view>
+        <view class="you">
+          <view class="yirenzheng"> </view>
+          <view class="icon">
+            <image src="/images/箭头.png" class="jiantou"></image>
+          </view>
+          
+          
+        </view>
+      </view>
+      <view class="section" bindtap="lianxiTap">  
+        <view class="zuo">
+          <view class="icon">
+            <image src="/images/lianxikefu.png" class="shiming"></image>
+          </view>
+          
+          <view class="shimingzi">联系客服</view>
+        </view>
+        <view class="you">
+          <view class="yirenzheng"> </view>
+          <view class="icon">
+            <image src="/images/箭头.png" class="jiantou"></image>
+          </view>
+          
+          
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

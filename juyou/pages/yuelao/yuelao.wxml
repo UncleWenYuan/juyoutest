@@ -1,0 +1,201 @@
+<!--pages/yuelao/yuelao.wxml-->
+
+<wxs module="util">
+    var max = 20;
+    var timeMax = 10;
+    var sub = function(val) {
+      if(val.length>max)
+        return val.substring(0, max)+"..."
+      else
+        return val
+
+    }
+    var subTime = function(val) {
+      
+        return val.substring(0, timeMax)
+     
+
+    }
+
+    module.exports.sub = sub;
+    module.exports.subTime = subTime;
+
+</wxs>
+
+<view class="pageColumn">
+
+  <view class="shang">
+    <image class="banner" mode="aspectFill" src="{{huodong.imageUrl}}"></image>
+    <view class="newPart">
+      <view class="zuiyihang">
+      <view class="zuiyijiangnan">{{huodong.theme}}</view>
+      <view class="youban" bindtap="faburenTap" data-id="{{huodong.publisherUserInfo.userId}}">
+        <image class="border" src="{{huodong.publisherUserInfo.avatarImageUrl}}"></image>
+        <view class="faqiren">{{huodong.publisherUserInfo.nickName}}</view>
+      </view>
+    </view>
+    <view class="juzhong">
+      <text class="riqi">{{start}} - {{end}}</text> </view>
+    <view class="juzhong">
+      <text class="didian" wx:if="{{huodong.location.name!=''}}">{{huodong.location.name}}</text>
+      <text class="didian" wx:else style="margin-top:8rpx;">线上活动</text>
+    </view>
+    
+    <view class="renshuhang">
+      <view class="renshuzuoban">
+        <text>人数:</text>
+        <view class="ershi">{{huodong.peopleNumber}}</view>
+        <view>/{{huodong.numberOfRegistered}}</view>
+        <view class="kuohao">({{huodong.bonusStandard}}友币/人)</view>
+      </view>
+      <view class="renshuyouban" bindtap="tap">
+        <image src="{{user3Image}}" class="disanceng tu">
+        </image>
+        <image src="{{user2Image}}" class="dierceng tu">
+        </image>
+        <image src="{{user1Image}}" class="diyiceng tu">
+        </image>
+        
+          
+        <image src="/images/箭头.png" class="jiantou"></image>
+      </view>
+    </view>
+    <view wx:if="{{youxia=='报名中'}}" style="width:85%; text-align:right;font-size:18rpx; color:#b5a0a0">报名人员审核</view>
+    <view wx:if="{{youxia=='任务进行中'}}" style="width:85%; text-align:right;font-size:18rpx; color:#b5a0a0">到场人员确认</view>
+
+    
+    
+    </view>
+    
+
+  </view>
+
+  <view class="zhong">
+    
+
+    <view class="swiper-tab">
+    
+      <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">任务说明</view>
+      
+      <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">任务要求</view>
+      
+      <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">留言咨询</view>
+    
+    </view>
+    
+    
+    
+    <!--内容主体-->
+    
+    <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    
+      <swiper-item>
+      
+        <!-- 最新 -->
+        <scroll-view class="sanfenzhiyi" scroll-y="true" style="height:100%;">
+        <view style="word-break:break-all;margin:24rpx;">
+          <text >{{huodong.explain}}</text>
+          </view>
+          <view style="display:flex;flex-direction:row;">
+            <image wx:for="{{huodong.enclosureUrlList}}" src="/images/文件夹图标@3x.png" style="width: 44rpx;height: 35rpx; margin-left: 24rpx;margin-top: 20rpx; margin-bottom:20rpx;" data-url = "{{huodong.enclosureUrlList[index]}}" bindtap="tapfujian"></image>
+          </view>
+          
+           
+        </scroll-view>
+        
+      </swiper-item>
+        
+      <swiper-item>
+        
+        <!-- 最新 -->
+        <view class="sanfenzhiyi">
+
+          <view class="diyikuai">
+            <view class="section">
+              <view class="xingbie">性别</view>
+              <view class="nv">{{huodong.requirement.gender==1?"男":"女"}}</view>
+            </view>
+            <view class="section">
+              <view class="xingbie">年龄</view>
+              <view class="nv">{{huodong.requirement.ageRange.start}}~{{huodong.requirement.ageRange.end}}岁</view>
+            </view>
+          </view>
+
+          <view class="diyikuai">
+            <view class="section">
+              <view class="xingbie">学历</view>
+              <view class="nv">{{huodong.requirement.educationName}}</view>
+            </view>
+            <view class="section">
+              <view class="xingbie">行业</view>
+              <view class="nv">{{huodong.requirement.occupationName}}</view>
+            </view>
+          </view>
+
+          <view class="diyikuai">
+            <view class="section">
+              <view class="xingbie">报名社区</view>
+              <view class="nv">{{huodong.requirement.address}}</view>
+            </view>
+            
+          </view>
+        </view>
+        
+        
+      </swiper-item>
+        
+      <swiper-item>
+        
+        <!-- 最新 -->
+        <scroll-view scroll-y="true" style="height: 100%;">
+        
+        <input focus="{{focus}}" bindconfirm="confirm"  value="{{inputValue}}" style="width:100%;margin-left:20rpx;margin-top:20rpx;  word-break:break-all;" placeholder="{{placeholder}}" maxlength="24"></input>
+        <view wx:for="{{comment.list}}" wx:key="id" style="margin-left: 20rpx;margin-right: 20rpx; margin-bottom:5rpx; margin-top:13rpx;" bindtap="huifu" data-user="{{item}}" >
+
+
+        <view class="liuyan2"style="word-break:break-all;" wx:if="{{item.replyUserInfo!=null}}">
+        <view>{{item.userInfo.nickName}}@{{item.replyUserInfo.nickName}}: {{item.content}}</view>
+       </view>
+       <view class="liuyan2"style="word-break:break-all;" wx:if="{{item.replyUserInfo==null}}">
+        <view>{{item.userInfo.nickName}}: {{item.content}}</view>
+       </view>
+
+        
+        
+        
+        </view>
+        
+          
+         
+        </scroll-view>
+        
+      </swiper-item>
+    
+    </swiper>
+
+    
+    
+  </view>
+
+  <view class="xia">
+    <view class="xiazuo" wx:if="{{showxiazuo==1}}" bindtap="tap4">
+      <view class="liuyan "bindtap="liuyanFun">留言</view>
+    </view>
+    <view class="xiayou"  style="background-color:{{bgcolor}};width:{{width}}%" bindtap="tap2">
+      <view class="woyaobaoming" style="color:{{ziticolor}};">{{youxia}}</view>
+    </view>
+  </view>
+
+
+
+  <image src="/images/qiandaotu.png" class="bi" bindtap="tap3" wx:if="{{keqiandao==1&&huodong.requirement.signInRange!=null}}">
+    </image>
+
+
+
+
+
+
+
+
+</view>

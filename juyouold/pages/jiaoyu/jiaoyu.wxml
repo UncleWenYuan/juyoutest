@@ -1,0 +1,32 @@
+<view class="columnPage">
+
+  <view class="shang">
+    <view class="diyihang">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+        <view class="picker">
+
+          <view class="zuoban">学历</view>
+          <view class="youban {{good?'on':''}}">{{array[index].name}}</view>
+          
+        </view>
+      </picker>
+    </view>
+    <view class="diyihang">
+     
+        <view class="picker">
+            <input class="input" name="userName" placeholder="填写毕业院校" 
+    bindinput="userNameInput">
+            
+            </input>
+          
+        </view>
+      
+    </view>
+  </view>
+  <view class="xia">
+    <view class="background" bindtap="baocun">
+      <view class="fabu">保存</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,103 @@
+<!--pages/sousuo/sousuo.wxml-->
+<!-- <wxs src='/utils.wxs' module='tools'/> -->
+
+<wxs module="util">
+    var max = 20;
+    var sub = function(val) {
+      if(val.length>max)
+        return val.substring(0, max)+"..."
+      else
+        return val
+
+    }
+
+    module.exports.sub = sub;
+
+</wxs>
+<view class="columnPage">
+
+    <view class='shangbanbufen' >
+
+      <view class="qingshuruhang">
+        <view class="search_arr">
+          <icon class="searchcion" size='18' type='search'></icon>
+          <input class="xx"  resize="true" placeholder="请输入搜索关键词" value="{{searchValue}}"                 bindconfirm="bindInput"/>
+        </view>
+      </view>
+       <view class="xuanchuanhang">
+        <view class="sanfenzhiyi">
+          <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{xuanchuan}}" range-key="name">
+            <view>
+            <text class="myText">{{defaultValue1}}</text>
+            </view>
+            
+          </picker>
+          <image class="xiajian" src="/images/下箭头.png">
+            </image>
+        
+        </view>
+        <view class="sanfenzhiyi">
+          <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{zhiyuan}}" range-key="name">
+            <view>
+            <text class="myText">{{defaultValue2}}</text>
+            </view>
+            
+          </picker>
+          <image class="xiajian" src="/images/下箭头.png">
+            </image>
+        
+        </view>
+        <view class="sanfenzhiyi">
+          <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{shejiao}}" range-key="name">
+            <view>
+            <text class="myText">{{defaultValue3}}</text>
+            </view>
+            
+          </picker>
+          <image class="xiajian" src="/images/下箭头.png">
+            </image>
+        
+        </view>
+          
+        
+       </view>
+
+    </view>
+
+
+    <view class='xiabanbufen' >
+      <view class="zuixin" bindtap="tap" wx:for="{{sousuojieguo}}" wx:for-index="id" wx:key="key" data-id="{{item.id}}"  data-zhuangtai="{{item.signUpState}}">
+          <view class="zuixinneirong" >
+            <view class="tupianbufen">
+              <image class="xiaceng" mode="aspectFill" src="{{item.imageUrl}}"></image>
+              <image src="/images/报名状态.png" class="baomingzhuangtai">
+                <view class="neirong">
+                  <view class="zuoban">
+                    <view class="jinbishuzhi">{{item.bonusStandard}}</view>
+                    <image class="jinbi" src="/images/金币@3x.png"></image>
+                  </view>
+                  <view class="youban" wx:if="{{item.signUpState==null||item.signUpState=='cancel'}}">进行中</view>
+                  <view class="youban" wx:else>已报名</view>
+                </view>
+              </image>
+            </view>
+            <view class="waitanhang">
+              <view>
+              <text class="waitan">{{util.sub(item.theme)}}</text> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <text  class="shibayibai">{{item.peopleNumber}}/{{item.numberOfRegistered}}</text> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <text>{{item.startTime}}</text> 
+              <text>{{item.locationName}}</text>
+            </view>
+          </view>
+        </view>
+        
+    </view>
+    
+</view>

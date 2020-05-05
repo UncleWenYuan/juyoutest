@@ -1,0 +1,168 @@
+.columnPage
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #F0F0F0;
+
+}
+.shang{
+  width: 100%;
+  height:600rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.zhong{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  margin-top: 20rpx;
+
+}
+.xia{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.liufenzhiyi{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #F0F0F0;
+  background-color: white;
+
+}
+image{
+  width:20rpx;
+  height: 20rpx;
+}
+
+.zuoban
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-left: 50rpx;
+
+}
+.youban{
+
+  height: 100%;
+  width: 65%;
+
+  font-size: 27rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+
+}
+.youjian{
+  width: 10rpx;
+  height: 20rpx;
+  margin-left: 15rpx;
+  
+}
+.xingbie{
+  margin-left: 15rpx;
+}
+.color{
+  color: #999999;
+  
+}
+
+text{
+  font-size:27rpx;
+}
+.section{
+  
+  
+  width: 100%;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.pick{
+  width:100%;
+  height: 100%;
+  
+}
+
+.top{
+  border-top: 1rpx solid #F0F0F0;
+}
+
+.background{
+  margin-top: 70rpx;
+  width: 600rpx;
+  height: 70rpx;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #28A9FA;
+}
+
+.fabu{
+  color: white;
+  font-size: 30rpx;
+  letter-spacing: 10rpx;
+}
+.xinghao{
+  margin-bottom:15  rpx;
+}
+
+.color{
+  color: #726e6e;
+}
+
+.sanfenzhiyi{
+  height: 200rpx;
+  width: 100%;
+  background-color: white;
+  border-top: 1rpx #F0F0F0 solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.shenfenxia
+{
+  font-size: 27rpx;
+}
+.shenfenzhao{
+  width: 25%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+
+.tupianwei{
+  width: 120rpx;
+  height: 120rpx;
+}

@@ -1,0 +1,33 @@
+<view class="columnPage">
+  <view class="shang">
+    <view class="zuo">可提现友币:</view>
+    <view class="you">{{number}}</view>
+  </view>
+  <view class="xia">
+    <view class="shangban"> 
+      <view class="qingshuruhang">
+        <view class="greyBG">
+          <input class="qingshuruyoubi" placeholder="请输入兑出友币" placeholder-class="center" maxlength="10" bindinput="input" type="number"></input>
+        </view>
+      
+      </view>
+      <view class="youbihang">
+        <view class="zuoban" wx:if="{{number<getNumber}}">友币不足</view>
+        <view class="zuoban" wx:if="{{number>=getNumber}}"></view>
+        <view class="youban">10友币=1元 （100元起提）</view>
+      </view>
+    </view>
+    <view class="xiaban">
+      
+      <view class="background" bindtap="weixinInput">
+        <view class="fabu">微信提现</view>
+      </view>
+      <view class="background" bindtap="zhifubaoInput">
+        <view class="fabu">支付宝提现</view>
+      </view>
+    </view>
+  
+  </view>
+
+</view>
+

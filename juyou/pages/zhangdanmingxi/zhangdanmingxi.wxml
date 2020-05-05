@@ -1,0 +1,107 @@
+<view class="columnPage">
+ 
+
+  <view class="xia">
+    <view class="swiper-tab">
+      <view class="section">
+        <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+          <view class="baomingzhong" data-current="0" bindtap="swichNav">提现记录</view>
+        </view>
+        
+        <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+        <view class="baomingzhong" data-current="1" bindtap="swichNav">充值记录</view>
+        </view>
+
+
+         <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">
+        <view class="baomingzhong" data-current="2" bindtap="swichNav">友币记录</view>
+        </view>
+     </view>
+
+
+    
+    
+    </view>
+
+
+    <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="erfenzhiyi"  wx:for="{{range}}" wx:key="key">
+            <view class="diyihang">
+              <view class="zhifubao" style="display:flex; flex-direction:row;">
+              <view wx:if="{{item.mode=='wechat'}}">微信</view>
+              <view wx:if="{{item.mode=='alipay'}}">支付宝</view>
+                <view>提现{{item.money}}</view>
+                <view wx:if="{{item.state=='in_processing'}}">元  处理中</view>
+                <view wx:if="{{item.state=='success'}}">元  提现成功</view>
+                <view wx:if="{{item.state=='fail'}}">元  提现失败</view>
+              
+              
+              </view>
+              
+              <view class="shuzi">-{{item.currency}}</view>
+            </view>
+            <view class="dierhang">
+              <view class="erlingkuai">
+                <view class="riqi">{{item.createTime}}</view>
+                <!-- <view class="shijian">{{item.shijian}}</view> -->
+              </view>
+              <view class="zhuangtai" style="color:{{item.color}}">{{item.zhuangtai}}</view>
+            </view>
+            
+           
+          </view>
+        
+        </view>
+      </swiper-item>
+        
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="erfenzhiyi"  wx:for="{{range2}}" wx:key="key">
+            <view class="diyihang">
+              <view class="zhifubao">充值{{item.money}}元</view>
+              <view class="shuzi">+{{item.currency}}</view>
+            </view>
+            <view class="dierhang">
+              <view class="erlingkuai">
+                <view class="riqi">{{item.payTime}}</view>
+                <!-- <view class="shijian">{{item.shijian}}</view> -->
+              </view>
+              <view class="zhuangtai" style="color:{{item.color}}">{{item.zhuangtai}}</view>
+            </view>
+            
+           
+          </view>
+        
+        </view>
+        
+      </swiper-item>
+
+
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="erfenzhiyi"  wx:for="{{range3}}" wx:key="key">
+            <view class="diyihang">
+              <view class="zhifubao">收到{{item.userInfo.nickName}}{{item.currency}}友币</view>
+              <view class="shuzi">+{{item.currency}}</view>
+            </view>
+            <view class="dierhang">
+              <view class="erlingkuai">
+                <view class="riqi">{{item.createTime}}</view>
+              </view>
+            </view>
+            
+           
+          </view>
+        
+        </view>
+        
+      </swiper-item>
+
+    </swiper> 
+      
+  </view>
+
+</view>

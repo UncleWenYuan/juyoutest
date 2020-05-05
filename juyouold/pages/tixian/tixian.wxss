@@ -1,0 +1,112 @@
+.background{
+  
+  width: 600rpx;
+  height:85rpx;
+  margin-bottom: 50rpx;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #28A9FA;
+}
+
+.fabu{
+  color: white;
+  font-size: 34rpx;
+  letter-spacing: 4rpx;
+}
+
+.columnPage{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F0F0F0;
+}
+.shang{
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  border-top:1rpx solid #c5b6b6;
+}
+.xia{
+  height: 89%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.zuo{
+  margin-left: 70rpx;
+  font-size: 32rpx;
+}
+.you{
+  margin-right: 70rpx;
+  font-size: 32rpx;
+}
+
+.shangban{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.xiaban{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.greyBG{
+   width: 600rpx;
+  height:80rpx;
+  border: 1rpx solid rgb(87, 85, 85);
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+
+}
+.qingshuruyoubi{
+  font-size: 28rpx;
+  /* color: rgb(136, 130, 130); */
+  text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+.youbihang{
+  margin-top: 30rpx;
+  width: 600rpx;
+  height: 40rpx;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
+}
+.zuoban{
+  font-size: 30rpx;
+  color: #EA362C;
+}
+.youban{
+  font-size: 25rpx;
+  color: #868282;
+}

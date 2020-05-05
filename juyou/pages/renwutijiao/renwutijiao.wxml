@@ -1,0 +1,22 @@
+<view class="columnPage">
+  <view class="shang">
+    <textarea maxlength="200" class="textArea" placeholder="请输入提交感言" bindinput="input"></textarea>
+  </view>
+  <view class="zhong">
+  <view  wx:for="{{imageList}}" class="sanfen">
+    <image class="myImage" src="{{item.url}}" data-index="{{index}}" bindlongtap="shanchu"  bindtap="yulan"></image>
+  </view>
+    
+  <view class="sanfen">
+    <image src="/images/tupianwei.png" class="myImage" bindtap="jiatu" ></image>
+  </view>
+  </view>
+  <view class="xia">
+    <view class="background"  bindtap="fabu">
+      <view class="fabu">提 交</view>
+    </view>
+  </view>
+
+
+
+</view>

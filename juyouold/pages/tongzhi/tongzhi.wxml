@@ -1,0 +1,128 @@
+<wxs module="util">
+    var max = 25;
+    var max2 = 8;
+    var timeMax = 10;
+    var max3 = 15;
+    var sub = function(val) {
+      if(val.length>max)
+        return val.substring(0, max)+"..."
+      else
+        return val
+
+    }
+    var subTime = function(val) {
+      
+        return val.substring(0, timeMax)
+     
+
+    }
+    var sub2 = function(val) {
+      if(val.length>max2)
+        return val.substring(0, max2)+"..."
+      else
+        return val
+
+    }
+    var sub3 = function(val) {
+      if(val.length>max3)
+        return val.substring(0, max3)+"..."
+      else
+        return val
+
+    }
+
+    module.exports.sub = sub;
+    module.exports.subTime = subTime;
+    module.exports.sub2 = sub2;
+    module.exports.sub3 = sub3;
+
+</wxs>
+
+<view class="columnPage">
+  <view class="shang" bindtap="xitongxiaoxi">
+    <view class="zuoban">
+      <image class="" src="/images/铃铛.png"></image>
+      <view class="xitongxiaoxi">系统消息</view>
+    </view>
+    <view class="youban">
+      <image class="hongdian" src="/images/红点.png" wx:if="{{number>0}}"></image>
+    </view>
+  </view>
+
+  <view class="xia">
+    <view class="swiper-tab">
+      <view class="section">
+        <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+          <view class="baomingzhong" data-current="0" bindtap="swichNav">活动</view>
+        </view>
+        
+        <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+        <view class="baomingzhong" data-current="1" bindtap="swichNav">留言</view>
+        </view>
+     </view>
+    
+    </view>
+
+
+    <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange" style="height:{{swiperHeight}}rpx;">
+    
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="erfenzhiyi"  wx:for="{{range2}}" wx:key="key">
+            <view class="shangban2">
+             <view class="zuiyijiangnan2">{{util.sub(item.activity.theme)}}</view>
+            </view>
+            <view class="xiaban2">
+             
+             <view class="youbanbufen2">
+              <view class="zhangdajiehang">
+                <view class="zhangdajiepinglun">  
+                  <view>{{item.content}}</view>
+                </view>
+                <view class="erlingyijiu2">
+                  {{util.subTime(item.createTime)}}
+                </view>
+              </view>
+              <view class="pinglunghang"></view>
+             </view>
+            
+            </view>
+          </view>
+        
+        </view>
+      </swiper-item>
+
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="erfenzhiyi"  wx:for="{{range}}" wx:key="key" bindtap="tiaozhuan" data-id="{{item.activity.id}}">
+            <view class="shangban">
+             <view class="zuiyijiangnan">{{util.sub(item.activity.theme)}}</view>
+            </view>
+            <view class="xiaban">
+             <view class="zuobanbufen">
+              <image src="{{item.userInfo.avatarImageUrl}}" class="touxiang"></image>
+             </view>
+             <view class="youbanbufen">
+              <view class="zhangdajiehang">
+                <view class="zhangdajiepinglun">  
+                  <view>{{util.sub2(item.userInfo.nickName)}}</view>
+                  <view class="kongge">评论了你</view>
+                </view>
+                <view class="erlingyijiu">
+                  {{util.subTime(item.createTime)}}
+                </view>
+              </view>
+              <view class="pinglunghang">{{util.sub3(item.content)}}</view>
+             </view>
+            
+            </view>
+          </view>
+        
+        </view>
+      </swiper-item>
+
+    </swiper> 
+      
+  </view>
+
+</view>

@@ -1,0 +1,57 @@
+.columnPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+.diyi{
+  height: 400rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tubiao{
+  height: 200rpx;
+  width: 200rpx;
+}
+.dier{
+  height: 70rpx;
+  color: #d50404;
+  
+}
+.disan{
+  height: 70rpx;
+}
+.xia{
+  width: 100%;
+  margin-top: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grey{
+  color: grey;
+}
+.background{
+  margin-top:0rpx;
+  width: 600rpx;
+  height: 75rpx;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #28A9FA;
+}
+
+.fabu{
+  color: white;
+  font-size: 30rpx;
+  letter-spacing: 10rpx;
+}

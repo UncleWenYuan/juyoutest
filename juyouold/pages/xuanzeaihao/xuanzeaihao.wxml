@@ -1,0 +1,27 @@
+<view class="columnPage">
+  <view class="yiji" wx:for="{{array}}" wx:key="id0">
+    <view class="yiliaojiankang">{{item.name}}</view>
+    <view class="erji"  wx:for="{{item.secondHobbyList}}" wx:for-item="item2" wx:key="id1">
+      <view class="yihurenyuan">{{item2.name}}</view>
+      <view class="sanji">
+        <view class="xunhuan" wx:for="{{item2.thirdHobbyList}}" wx:for-item="item3" wx:key="key">
+          <view class="section" catchtap="acceptMission"  data-id='{{item3}}' wx:if="{{item3.chosen==false}}">
+          <!-- 需要加入 wx:if="{{item3.chosen==0}}" 在section里 -->
+            <view class="zi">{{item3.name}}</view>
+          </view>
+          <view class="chosenSection" wx:if="{{item3.chosen==true}}" catchtap="cancelMission" data-id='{{item3}}'>
+            <view class="zi">{{item3.name}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="whitePart"></view>
+
+</view>
+<view class="xia">
+    <view class="background">
+      <view class="fabu" bindtap="baocun">保存</view>
+    </view>
+  </view>

@@ -1,0 +1,57 @@
+.pageColumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  background-color: #F0F0F0;
+  height: 100%;
+}
+.sanfenzhiyi{
+  border-top: 1rpx solid #F0F0F0;
+  height:250rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.zuoban{
+  margin-left: 70rpx
+  ;
+}
+.diyihang{
+  background-color: white;
+  margin-top: 0rpx;
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+
+}
+.dierhang{
+  color: #999999;
+  
+  background: #F0F0F0;
+  width:100%;
+  word-break: break-all;
+}
+.huizi{
+  margin-top: 20rpx;
+  margin-left: 70rpx;
+  margin-right: 70rpx;
+  font-size: 26rpx;
+}
+
+image{
+  width: 35rpx;
+  height: 35rpx;
+}
+.image2{
+  width: 36rpx;
+  height: 35rpx;
+  margin-right: 70rpx;
+}

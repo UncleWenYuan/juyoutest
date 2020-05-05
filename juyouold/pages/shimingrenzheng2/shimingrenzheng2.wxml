@@ -1,0 +1,16 @@
+<view class="columnPage">
+  <view class="diyi">
+    <image src="/images/cha.png" class="tubiao"></image>
+  </view>
+  <view class="dier">{{diyihang}}</view>
+  <view class="disan">{{dierhang}}</view>
+
+  <view class="xia">
+      <view class="background" bindtap="baocun">
+        <view class="fabu">重新认证</view>
+      </view>
+    </view>
+
+
+
+</view>

@@ -1,0 +1,82 @@
+.pageColumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width:100%;
+  height: 100%;
+  background: #F0F0F0;
+}
+.yigeren{
+  background: white;
+  width: 100%;
+  height: 14%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-top: 1rpx solid #F0F0F0;
+  
+}
+.yiban{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 80%;
+}
+.lingyiban{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 20%;
+}
+.daitongguo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+}
+.gou{
+  width: 60rpx;
+  height: 60rpx;
+}
+.tongguo{
+  color: #28A9FA;
+  font-size: 26rpx;
+
+}
+.jujue{
+  color: #FF0000;
+  font-size: 26rpx;
+}
+.yitongguo{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  width:35%;
+  text-align:end;
+}
+.yitongguozi{
+  font-size: 26rpx;
+  color: black;
+  text-align: end;
+  width: 100%;
+}
+.touxiang{
+  margin-right: 40rpx;
+  margin-left: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+.wushi{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 60%;
+}

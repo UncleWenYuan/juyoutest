@@ -1,0 +1,378 @@
+<!-- 最新人气距离切换 -->
+<!--pages/shouye/shouye.wxml-->
+<wxs module="util">
+    var max = 18;
+    var timeMax = 10;
+    var sub = function(val) {
+      if(val.length>max)
+        return val.substring(0, max)+"..."
+      else
+        return val
+
+    }
+    var subTime = function(val) {
+      
+        return val.substring(0, timeMax)
+     
+
+    }
+
+    module.exports.sub = sub;
+    module.exports.subTime = subTime;
+
+</wxs>
+  <view class="xiabanbufen">
+   <view class="sanfenzhiyi">
+          <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{range}}" range-key="name">
+            <view>
+            <view class="myview">{{range[index1].name}}</view>
+            </view>
+            
+          </picker>
+          <image class="xiajian"  src="/images/下箭头.png">
+            </image>
+        
+        </view>
+  
+    <view class="swiper-tab" wx:if="{{index1==0}}">
+    
+      <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">报名中</view>
+      
+      <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">进行中</view>
+      
+      <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">提交中</view>
+
+      <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">已完成</view>
+    
+    </view>
+    
+    
+    
+    <!--内容主体-->
+    
+    <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange" style="height:{{swiperHeight}}rpx;" wx:if="{{index1==0}}">
+    
+     <swiper-item>
+        
+        <!-- 最新 -->
+        <view class="zuixin">
+        <view class="tishibufen">长按可以取消报名/任务</view>
+          <view class="zuixinneirong" bindtap="tap" bindlongtap="canyulongtap" wx:for="{{baomingzhongList}}" wx:if="{{baomingzhongList.length>=1}}" wx:key="null" data-id="{{item.id}}">
+        
+            <view class="tupianbufen">
+              <image class="xiaceng" mode="aspectFill"src="{{item.imageUrl}}">
+               
+              </image>
+             
+            </view>
+            <view class="waitanhang">
+              <view>
+              <view class="waitan">{{util.sub(item.theme)}}</view> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <view  class="text">{{item.numberOfRegistered}}/100</view> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <view>{{util.subTime(item.startTime)}}</view> 
+              <view>{{item.locationName}}</view>
+            </view>
+            
+          </view>
+
+         
+        </view>
+        
+        
+      </swiper-item>
+      <swiper-item>
+        
+        <!-- 最新 -->
+        <view class="zuixin">
+          <view class="zuixinneirong" bindtap="tap" wx:for="{{jinxingzhongList}}" wx:if="{{jinxingzhongList.length>=1}}" wx:key="null" data-id="{{item.id}}">
+            <view class="tupianbufen">
+              <image class="xiaceng" mode="aspectFill"src="{{item.imageUrl}}">
+               
+              </image>
+              
+            </view>
+            <view class="waitanhang">
+              <view>
+              <view class="waitan">{{util.sub(item.theme)}}</view> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <view  class="text">{{item.peopleNumber}}/{{item.numberOfRegistered}}</view> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <view>{{util.subTime(item.startTime)}}</view> 
+              <view>{{item.locationName}}</view>
+            </view>
+            
+          </view>
+
+         
+        </view>
+        
+        
+      </swiper-item>
+      <swiper-item>
+        
+        <!-- 最新 -->
+        <view class="zuixin">
+          <view class="zuixinneirong" bindtap="tap" wx:for="{{tijiaozhongList}}" wx:if="{{tijiaozhongList.length>=1}}"wx:key="null" data-id="{{item.id}}">
+            <view class="tupianbufen">
+              <image class="xiaceng" mode="aspectFill"src="{{item.imageUrl}}">
+               
+              </image>
+             
+            </view>
+            <view class="waitanhang">
+              <view>
+              <view class="waitan">{{util.sub(item.theme)}}</view> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <view  class="text">{{item.peopleNumber}}/{{item.numberOfRegistered}}</view> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <view>{{util.subTime(item.startTime)}}</view> 
+              <view>{{item.locationName}}</view>
+            </view>
+            
+          </view>
+
+         
+        </view>
+        
+        
+      </swiper-item>
+      <swiper-item>
+        
+        <!-- 最新 -->
+        
+        <view class="zuixin">
+          <view class="zuixinneirong" bindtap="tap" wx:for="{{yiwanchengList}}" wx:if="{{yiwanchengList.length>=1}}"  wx:key="null" data-id="{{item.id}}">
+            <view class="tupianbufen">
+              <image class="xiaceng" mode="aspectFill"src="{{item.imageUrl}}">
+               
+              </image>
+
+              <image src="/images/报名状态.png" class="baomingzhuangtai">
+                <view class="neirong">
+                  <view class="zuoban">
+                    <view class="jinbishuzhi">{{item.bonusStandard}}</view>
+                    <image class="jinbi" src="/images/金币@3x.png"></image>
+                  </view>
+                  <view class="youban" wx:if="{{item.whetherSettlement!=null&&item.whetherSettlement==true}}">已结算</view>
+                  <view class="youban" wx:else>未结算</view>
+                </view>
+              </image>
+              
+              
+              
+            </view>
+            <view class="waitanhang">
+              <view>
+              <view class="waitan">{{util.sub(item.theme)}}</view> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <view  class="text">{{item.peopleNumber}}/{{item.numberOfRegistered}}</view> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <view>{{util.subTime(item.startTime)}}</view> 
+              <view>{{item.locationName}}</view>
+            </view>
+            
+          </view>
+
+         
+        </view>
+        
+        
+      </swiper-item>
+    
+    </swiper>
+
+
+
+    <view class="swiper-tab" wx:if="{{index1==1}}">
+    
+      <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">审核中</view>
+      
+      <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">报名中</view>
+      
+      <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">进行中</view>
+
+      <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">已完成</view>
+    
+    </view>
+    
+    
+    
+    <!--内容主体-->
+    
+    <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange" style="height:{{swiperHeight}}rpx;" wx:if="{{index1==1}}">
+    
+     <swiper-item>
+        
+        <!-- 最新 -->
+        <view class="zuixin">
+        <view class="tishibufen">长按可以取消报名/任务</view>
+          <view class="zuixinneirong" bindtap="tap" wx:for="{{baomingzhongList2}}" wx:if="{{baomingzhongList2.length>=1}}" wx:key="null" data-id="{{item.id}}" bindlongtap="fabulongtap">
+        
+            <view class="tupianbufen">
+              <image class="xiaceng" mode="aspectFill" src="{{item.imageUrl}}">
+               
+              </image>
+              
+            </view>
+            <view class="waitanhang">
+              <view>
+              <view class="waitan">{{util.sub(item.theme)}}</view> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <view  class="text">{{item.peopleNumber}}/{{item.numberOfRegistered}}</view> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <view>{{util.subTime(item.startTime)}}</view> 
+              <view>{{item.locationName}}</view>
+            </view>
+            
+          </view>
+
+         
+        </view>
+        
+        
+      </swiper-item>
+      <swiper-item>
+        
+        <!-- 最新 -->
+        <view class="zuixin">
+        <view class="tishibufen">长按可以取消报名/任务</view>
+          <view class="zuixinneirong" bindtap="tap" wx:for="{{jinxingzhongList2}}" wx:if="{{jinxingzhongList2.length>=1}}" wx:key="null" data-id="{{item.id}}" bindlongtap="fabulongtap">
+            <view class="tupianbufen">
+              <image class="xiaceng"mode="aspectFill" src="{{item.imageUrl}}">
+               
+              </image>
+              
+            </view>
+            <view class="waitanhang">
+              <view>
+              <view class="waitan">{{util.sub(item.theme)}}</view> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <view  class="text">{{item.peopleNumber}}/{{item.numberOfRegistered}}</view> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <view>{{util.subTime(item.startTime)}}</view> 
+              <view>{{item.locationName}}</view>
+            </view>
+            
+          </view>
+
+         
+        </view>
+        
+        
+      </swiper-item>
+      <swiper-item>
+        
+        <!-- 最新 -->
+        <view class="zuixin">
+          <view class="zuixinneirong" bindtap="tap" wx:for="{{tijiaozhongList2}}" wx:if="{{tijiaozhongList2.length>=1}}"wx:key="null" data-id="{{item.id}}">
+            <view class="tupianbufen">
+              <image class="xiaceng" mode="aspectFill"src="{{item.imageUrl}}">
+               
+              </image>
+              
+              
+            </view>
+            <view class="waitanhang">
+              <view>
+              <view class="waitan">{{util.sub(item.theme)}}</view> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <view  class="text">{{item.peopleNumber}}/{{item.numberOfRegistered}}</view> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <view>{{util.subTime(item.startTime)}}</view> 
+              <view>{{item.locationName}}</view>
+            </view>
+            
+          </view>
+
+         
+        </view>
+        
+        
+      </swiper-item>
+      <swiper-item>
+        
+        <!-- 最新 -->
+        
+        <view class="zuixin">
+          <view class="zuixinneirong" bindtap="tap" wx:for="{{yiwanchengList2}}" wx:if="{{yiwanchengList2.length>=1}}"  wx:key="null" data-id="{{item.id}}">
+            <view class="tupianbufen">
+              <image class="xiaceng"mode="aspectFill" src="{{item.imageUrl}}">
+               
+              </image>
+              <image src="/images/报名状态.png" class="baomingzhuangtai">
+                <view class="neirong">
+                  <view class="zuoban">
+                    <view class="jinbishuzhi">{{item.bonusStandard}}</view>
+                    <image class="jinbi" src="/images/金币@3x.png"></image>
+                  </view>
+                  <view class="youban" wx:if="{{item.whetherSettlement!=null&&item.whetherSettlement==true}}">已结算</view>
+                  <view class="youban" wx:else>未结算</view>
+                </view>
+              </image>
+              
+            </view>
+            <view class="waitanhang">
+              <view>
+              <view class="waitan">{{util.sub(item.theme)}}</view> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <view  class="text">{{item.peopleNumber}}/{{item.numberOfRegistered}}</view> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <view>{{util.subTime(item.startTime)}}</view> 
+              <view>{{item.locationName}}</view>
+            </view>
+            
+          </view>
+
+         
+        </view>
+        
+        
+      </swiper-item>
+    
+    </swiper>
+
+    
+  
+   </view>

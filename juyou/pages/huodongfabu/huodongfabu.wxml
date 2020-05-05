@@ -1,0 +1,152 @@
+<view class="columnPage">
+
+  <view class="shang">
+<!-- 1 -->
+
+    <view class="liufenzhiyi">
+      <picker bindchange="bindPickerChange1" class="pick top" value="{{index1}}" range="{{array1}}">
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png"></image>
+            <text class="xingbie">性别</text>
+          </view>  
+          
+          <view class="youban {{currentTab1==0 ? 'color' : ''}}" >
+            
+            <text>{{defaultValue1}}</text>
+            <image class="youjian" src="/images/箭头.png"></image>
+            
+          </view>
+        </view>
+
+        
+    </picker>
+  </view>
+  <!-- 2 -->
+
+  <view class="liufenzhiyi">
+      <picker bindchange="bindPickerChange2" class="pick" value="{{index2}}" range="{{age}}" range-key="name">
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png"></image>
+            <text class="xingbie">年龄</text>
+          </view>  
+          
+          <view class="youban {{currentTab2==0 ? 'color' : ''}}" >
+            
+            <text wx:if="{{age[index2].name!='不限'}}">{{age[index2].start+"-"+age[index2].end}}</text>
+            <text wx:if="{{age[index2].name=='不限'}}">不限</text>
+            <image class="youjian" src="/images/箭头.png"></image>
+            
+          </view>
+        </view>
+
+        
+      </picker>
+    </view>
+  <!-- 3 -->
+
+    <view class="liufenzhiyi">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name" class="temp">
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png"></image>
+            <text class="xingbie">常住区域</text>
+          </view>  
+          
+          <view class="youban {{currentTab3==0 ? 'color' : ''}}">
+            
+            <text>{{multiArray[0][multiIndex[0]].name}}，{{multiArray[1][multiIndex[1]].name}}，{{multiArray[2][multiIndex[2]].name}}</text>
+            <image class="youjian" src="/images/箭头.png"></image>
+            
+          </view>
+        </view>
+
+        
+    </picker>
+  </view>
+
+  
+  
+  <!-- 4 -->
+
+    <view class="liufenzhiyi">
+      <view class="pick" >
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png"></image>
+            <text class="xingbie">报名范围</text>
+          </view>  
+          
+          <view class="youban" >
+            
+
+            
+            <input placeholder="公里" style="text-align:right" maxlength="5" type="digit" class="juli" bindinput="baomingConfirm"></input>
+            
+              <view wx:if="{{onBaoming==1}}" class="margin">公里</view>
+            
+          </view>
+        </view>
+
+        
+    </view>
+  </view>
+  <!-- 5 -->
+
+    <view class="liufenzhiyi">
+      <picker bindchange="bindPickerChange10" class="pick" value="index10" range="{{education}}" range-key="name">
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png"></image>
+            <text class="xingbie">教育水平</text>
+          </view>  
+          
+          <view class="youban {{currentTab11==0 ? 'color' : ''}}" >
+            
+            <text>{{jiaoyushuiping}}</text>
+            <image class="youjian" src="/images/箭头.png"></image>
+            
+          </view>
+        </view>
+
+        
+    </picker>
+  </view>
+  <!-- 6 -->
+
+    <view class="liufenzhiyi">
+      <view class="pick" bindtap="zhiye">
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png"></image>
+            <text class="xingbie">从事行业</text>
+          </view>  
+          
+          <view class="youban {{currentTab1111==0 ? 'color' : ''}}" >
+            
+            <text>{{congshihangye}}</text>
+            <image class="youjian" src="/images/箭头.png"></image>
+            
+          </view>
+        </view>
+
+        
+      </view>
+    </view>
+
+   
+</view>
+
+  
+
+  <view class="xia">
+  
+    <view class="background" bindtap="fabu">
+      <view class="fabu">发 布</view>
+    </view>
+  </view>
+
+
+
+</view>

@@ -1,0 +1,202 @@
+.columnPage{
+  width: 100%;
+  height: 100%;
+  background-color: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.shang{
+  height: 200rpx;
+  width: 100%;
+  background-color: #28A9FA;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+
+}
+.xia{
+width: 100%;
+margin-top: 20rpx;
+
+}
+.gen{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #F0F0F0;
+  height: 140rpx;
+  background-color: white;
+}
+.er{
+  height: 200rpx;
+  border-top: 1rpx solid #F0F0F0;
+  
+ 
+display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ 
+
+  background-color: white;
+
+}
+.zuo{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.touxiang{
+  margin-left: 50rpx;
+  margin-bottom: 20rpx;
+  height: 110rpx;
+  width: 110rpx;
+  border-radius: 55rpx;
+}
+.you{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shangban{
+  /* border: 1rpx solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  
+  width: 100%;
+
+}
+.zuoban{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.youban{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.jiujiujiu{
+  color: white;
+  font-size: 25rpx;
+  
+  letter-spacing: 1rpx;
+
+}
+.canyuderenwu{
+    color: white;
+  font-size: 25rpx;
+  letter-spacing: 1rpx;
+}
+.youban{
+  width: 30%;
+  height: 100%;
+}
+.xiaban{
+ 
+  width: 100%;
+}
+.bg{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  border-radius: 40rpx;
+  width: 300rpx;
+  height: 55rpx;
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dianzan{
+  font-size: 23rpx;
+  letter-spacing: 2rpx;
+}
+
+
+.xingbie{
+ /* relative是相对本身应该的位置 absolute是对于第一个固定位置的父类 fixed是整个屏幕  */
+  position: relative;
+
+ top:30rpx;
+  right: 20rpx;
+  width: 30rpx;
+  height: 40rpx;
+  z-index: 1;
+}
+.jiantou{
+  width: 15rpx;
+  height: 25rpx;
+  margin-right: 20rpx;
+}
+.zuobanbufen{
+  margin-left: 60rpx;
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.shangbanbufen{
+  margin-bottom: 7rpx;
+  color: #4d4848;
+  font-size: 26rpx;
+  letter-spacing: 1rpx;
+}
+.xiabanbufen{
+  margin-top: 7rpx;
+  color: #999999;
+  font-size: 26rpx;
+  
+  letter-spacing: 1rpx;
+}
+
+.xiabanbufen2{
+  /* margin-top: 12rpx; */
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section{
+  background-color: #7BC6FB;
+  
+  margin-top: 10rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40rpx;
+  
+}
+.zi{
+  font-size: 25rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  letter-spacing: 1rpx;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rpx;
+}

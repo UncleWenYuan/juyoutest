@@ -1,0 +1,34 @@
+<view class="columnPage">
+  <view class="section" wx:for="{{range}}">
+    <view class="icon"  data-state="{{item.state}}" data-index="{{index}}" bindtap="tap">
+      <image class="tupian" src="/images/成功标志 @3x.png" wx:if="{{isPicker[index]}}"></image>
+    </view>
+    <view class="name" bindtap="xiugai" data-id="{{item.id}}" data-state="{{item.state}}">
+    {{item.companyName}}
+    </view>
+    <view class="state" wx:if="{{item.state=='awaiting_audit'}}" >
+    待审核
+    </view>
+    <view class="state" wx:if="{{item.state=='in_audit'}}">
+    审核中
+    </view>
+    <view class="state" wx:if="{{item.state=='audit_pass'}}" style="color:#28A9FA">
+    审核通过
+    </view>
+    <view class="state" wx:if="{{item.state=='audit_reject'}}"   style="color: #d50404;">
+    审核拒绝
+    </view> <view class="state" wx:if="{{item.state=='cancel_certification'}}">
+    取消认证
+    </view>
+    
+  
+  </view>
+
+  <view class="xia">
+      <view class="background" bindtap="baocun">
+        <view class="fabu">完成</view>
+      </view>
+    </view>
+
+
+</view>

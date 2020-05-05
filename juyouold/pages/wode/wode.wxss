@@ -1,0 +1,158 @@
+image{
+  width: 50rpx;
+  height: 40rpx;
+}
+.touxiang{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius:55rpx;
+}
+page{
+  background-color: #F0F0F0;
+}
+.renzheng{
+  width: 93rpx;
+  height: 39rpx;
+}
+.xingbie{
+  width: 30rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+
+}
+.pageColumn{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.shangban{
+  height: 15%;
+  width: 100%;
+  /* border: 1rpx solid black; */
+  background-color: #28A9FA;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.zuoban{
+  height: 100%;
+  width: 26%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.youban{
+  width: 74%;
+  height: 100%;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.zhanghang{
+  
+  width: 100%;
+  margin-left: 5rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.renzhenghang{
+  /* height: 50%; */
+  width: 100%;
+  margin-top: 12rpx;
+  
+}
+
+.zhangzhenming{
+  color: white;
+  font-size: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.xiaban{
+  width: 100%;
+  display: flex;  
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.shang{
+
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.zhong{
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+.xia{
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+.section{
+ height :90rpx;
+ background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #F0F0F0;
+}
+
+.icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.zuo{
+  height: 100%;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.you{
+  margin-right: 20rpx;
+height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+.shiming{
+  
+  margin-top: 2rpx;
+}
+.shimingzi{
+  letter-spacing: 1rpx;
+  font-size: 29rpx;
+  margin-left: 30rpx;
+}
+.jiantou{
+  
+  width: 15rpx;
+  height: 25rpx;
+  margin-left: 16rpx;
+  margin-bottom: 3rpx;
+}
+.yirenzheng{
+  font-size: 29rpx;
+  letter-spacing: 1rpx;
+  color: #999999;
+}

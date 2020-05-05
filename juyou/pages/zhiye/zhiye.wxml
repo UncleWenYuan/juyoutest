@@ -1,0 +1,45 @@
+<view class="columnPage">
+
+  <view class="shang">
+    <view class="diyihang">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+        <view class="picker">
+
+          <view class="zuoban">现状</view>
+          <view class="youban {{good?'on':''}}">{{array[index].name}}</view>
+          
+        </view>
+      </picker>
+    </view>
+    <view class="diyihang">
+      <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}" range-key="name">
+        <view class="picker">
+
+          <view class="zuoban">月收入</view>
+          <view class="youban {{good2?'on':''}}">{{array2[index2].name}}</view>
+          
+        </view>
+      </picker>
+    </view>
+
+    <view class="diyihang" wx:if="{{show==1}}">
+     
+        <view class="picker" bindtap="zhiye">
+
+          <view class="zuoban">职业</view>
+          <view class="youban {{good3?'on':''}}">
+            <view class="xiaozhang">{{chosenNAME}}</view>
+            <image class="jiantou" src="/images/灰箭头.png"></image>
+          </view>
+          
+        </view>
+      
+    </view>
+  </view>
+  <view class="xia">
+    <view class="background" bindtap="baocun">
+      <view class="fabu">保存</view>
+    </view>
+  </view>
+
+</view>

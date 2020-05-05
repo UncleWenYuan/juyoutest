@@ -1,0 +1,27 @@
+<view class="columnPage">
+  <view class="shang">
+    <view class="shangban">
+      <view class="zuoban">
+        <image src="/images/金币@3x.png" class="jinbi"></image>
+      </view>
+      <view class="youban">
+        <view>友币余额</view>
+      </view>
+    </view>
+    <view class="xiaban">{{number}}</view>
+  </view>
+  <view class="zhong">
+    <view class="yiban">
+      <view class="section {{(item.id==pickIndex)?'blue':''}}" wx:for="{{range}}" wx:key="key" wx:for-index="index" bindtap="tap1" data-index="{{item.id}}">
+        <view class="yibai">{{item.currency}}友币</view>
+        <view class="yuan">￥{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="xia">
+    <view class="background">
+      <view class="fabu" bindtap="zhifu">微信支付</view>
+    </view>
+  </view>
+
+</view>

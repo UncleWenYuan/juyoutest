@@ -1,0 +1,79 @@
+<view class="pageColumn" wx:if="{{jieshubaoming==0&&renwujinxingzhong==0}}">
+  <view class="yigeren" wx:for="{{range}}" wx:key="key">
+    <image class="touxiang" src="{{item.avatarImageUrl}}"  bindtap="gerenziliao" data-id="{{item.userId}}"></image>
+    <text class="nicheng">{{item.nickName}}</text>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="pageColumn" wx:if="{{jieshubaoming==1}}">
+  <view class="yigeren" wx:for="{{range}}" wx:key="key">
+  <view class="wushi">
+  
+    <image class="touxiang" src="{{item.userInfo.avatarImageUrl}}" bindtap="gerenziliao" data-id="{{item.userInfo.userId}}"></image>
+    <text class="nicheng">{{item.userInfo.nickName}}</text>
+  </view>
+
+
+    <view wx:if="{{item.state=='in_audit'}}" class="daitongguo">
+      <image src="/images/成功标志 @3x.png" class="gou" wx:if="{{item.whetherAccordWithRequirement==true}}"></image>
+      <view class="tongguo" bindtap="tongguo" data-id="{{item.id}}">通过</view>
+      <view class="jujue" bindtap="jujue" data-id="{{item.id}}">拒绝</view>
+    
+    
+    </view>
+    
+    <view wx:if="{{item.state=='audit_pass'}}" class="yitongguo">
+      <view class="yitongguozi">通过</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="pageColumn" wx:if="{{renwujinxingzhong==1}}">
+  <view class="yigeren" wx:for="{{range}}" wx:key="key">
+  <view class="yiban">
+  <image class="touxiang" src="{{item.userInfo.avatarImageUrl}}"  bindtap="gerenziliao" data-id="{{item.userInfo.userId}}"></image>
+    <text class="nicheng">{{item.userInfo.nickName}}</text>
+  
+  </view>
+  <view class="lingyiban">
+
+  <text wx:if="{{item.whetherBePresent==1}}" style=" color:black;">已确认</text>
+    
+    <text wx:if="{{item.whetherBePresent!=1}}" bindtap="tapqueren" style="color:#28A9FA;" data-id="{{item.id}}">通过</text>
+
+  
+  </view>
+    
+    
+  </view>
+</view>
+
+
+
+
+

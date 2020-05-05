@@ -1,0 +1,218 @@
+<!--pages/shouye/shouye.wxml-->
+<wxs module="util">
+    var max = 20;
+    var timeMax = 10;
+    var sub = function(val) {
+      if(val.length>max)
+        return val.substring(0, max)+"..."
+      else
+        return val
+
+    }
+    var subTime = function(val) {
+      
+        return val.substring(0, timeMax)
+     
+
+    }
+
+    module.exports.sub = sub;
+    module.exports.subTime = subTime;
+
+</wxs>
+
+  <!-- bindtap="suo"-->
+  <view class='page_column' >
+
+   <!-- 搜索 -->
+    <view class='shangbanbufen' >
+
+      <view class="search_arr" bindtap="sousuo">
+        <icon class="searchcion" size='15' type='search'></icon>
+        <view class="xx">请输入搜索关键字</view>
+      </view>
+        
+  <!-- 幻灯片 -->
+      <swiper indicator-dots="true" autoplay="true"  interval="5000" duration="500" class="mySwiper">
+        <view wx:for="{{swiperImg}}" wx:key="key" bindtap="tapSwiper" data-id="{{item.id}}" data-url="{{item.url}}" data-item="{{item}}">
+          <swiper-item>
+            <image mode="aspectFill" src="{{item.imageUrl}}"></image>
+          </swiper-item>
+        </view>
+      </swiper>
+    </view>
+
+
+
+<!-- 最新人气距离切换 -->
+
+  <view class="xiabanbufen" style="height:{{xiabanbufenheight}}rpx;">
+  
+    <view class="swiper-tab">
+    
+      <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+        <view class="" >最新</view>
+      </view>
+      
+      <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+        <view class="">人气</view></view>
+      
+      <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">
+        <view class="">距离</view></view>
+    
+    </view>
+    
+    
+    
+    <!--内容主体-->
+    
+    <swiper class="swiper" style="height:{{swiperheight}}rpx;" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    
+      <swiper-item>
+      
+        <!-- 最新 -->
+        <scroll-view scroll-y="true" style="height: 100%;" bindtouchstart="fresh">
+        <view class="zuixin" >
+          <view class="zuixinneirong" style="height:{{zuixinneirongheight}}rpx;" bindtap="tap"data-id="{{zuixin.list[index].id}}" data-zhuangtai="{{zuixin.list[index].signUpState}}" wx:for="{{zuixin.list}}">
+            <view class="tupianbufen">
+              <image class="xiaceng" mode="aspectFill" src="{{zuixin.list[index].imageUrl}}"></image>
+              <image src="/images/报名状态.png" class="baomingzhuangtai">
+                <view class="neirong">
+                  <view class="zuoban">
+                    <view class="jinbishuzhi">{{zuixin.list[index].bonusStandard}}</view>
+                    <image class="jinbi" src="/images/金币@3x.png"></image>
+                  </view>
+                  <view class="youban" wx:if="{{zuixin.list[index].signUpState==null||zuixin.list[index].signUpState=='cancel'}}">进行中</view>
+                  <view class="youban" wx:else>已报名</view>
+                </view>
+              </image>
+            </view>
+            <view class="waitanhang">
+              <view class="margin">
+              <text class="waitan">{{util.sub(zuixin.list[index].theme)}}</text> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <text  class="">{{zuixin.list[index].peopleNumber}}/{{zuixin.list[index].numberOfRegistered}}</text> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <text>{{util.subTime(zuixin.list[index].startTime)}}</text> 
+              <text>{{zuixin.list[index].locationName}}</text>
+            </view>
+            
+          </view>
+
+          
+        </view>
+         </scroll-view>
+      </swiper-item>
+        
+      <swiper-item>
+        
+        <!-- 人气 -->
+        <scroll-view scroll-y="true" style="height: 100%;" bindtouchstart="fresh">
+        <view class="zuixin">
+          <view class="zuixinneirong"  style="height:{{zuixinneirongheight}}rpx;"style="height:{{zuixinneirongheight}}rpx;" bindtap="tap" data-id="{{renqi.list[index].id}}" data-zhuangtai="{{renqi.list[index].signUpState}}" wx:for="{{renqi.list}}">
+            <view class="tupianbufen">
+              <image class="xiaceng"mode="aspectFill" src="{{renqi.list[index].imageUrl}}">
+               
+              </image>
+               <image src="/images/报名状态.png" class="baomingzhuangtai">
+                <view class="neirong">
+                  <view class="zuoban">
+                    <view class="jinbishuzhi">{{renqi.list[index].bonusStandard}}</view>
+                    <image class="jinbi" src="/images/金币@3x.png"></image>
+                  </view>
+                  <view class="youban" wx:if="{{renqi.list[index].signUpState==null||renqi.list[index].signUpState=='cancel'}}">进行中</view>
+                  <view class="youban" wx:else>已报名</view>
+                </view>
+              </image>
+              <!-- <image class="shangceng" src="/images/我的.png"></image> -->
+            </view>
+            <view class="waitanhang">
+              <view class="margin">
+              <text class="waitan">{{util.sub(renqi.list[index].theme)}}</text> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <text  class="">{{renqi.list[index].peopleNumber}}/{{renqi.list[index].numberOfRegistered}}</text> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <text>{{util.subTime(renqi.list[index].startTime)}}</text> 
+              <text>{{renqi.list[index].locationName}}</text>
+            </view>
+            
+          </view>
+
+          
+        </view>
+         </scroll-view>
+        
+      </swiper-item>
+        
+      <swiper-item>
+        
+        <!-- 距离 -->
+        
+        <scroll-view scroll-y="true" style="height: 100%;" bindtouchstart="fresh">
+        <view class="zuixin" >
+          <view class="zuixinneirong" style="height:{{zuixinneirongheight}}rpx;"bindtap="tap" data-id="{{juli.list[index].id}}" data-zhuangtai="{{juli.list[index].signUpState}}" wx:for="{{juli.list}}">
+            <view class="tupianbufen">
+              <image class="xiaceng" mode="aspectFill"src="{{juli.list[index].imageUrl}}"></image>
+               <image src="/images/报名状态.png" class="baomingzhuangtai">
+                <view class="neirong">
+                  <view class="zuoban">
+                    <view class="jinbishuzhi">{{juli.list[index].bonusStandard}}</view>
+                    <image class="jinbi" src="/images/金币@3x.png"></image>
+                  </view>
+                  <view class="youban" wx:if="{{juli.list[index].signUpState==null}}||juli.list[index].signUpState=='cancel'">进行中</view>
+                  <view class="youban" wx:else>已报名</view>
+                </view>
+              </image>
+            </view>
+            <view class="waitanhang">
+              <view class="margin">
+              <text class="waitan">{{util.sub(juli.list[index].theme)}}</text> 
+              </view>
+              <view class="shiba">
+                <image class="rentubiao" src="/images/人图标@3x.png"></image> 
+                <text  class="">{{juli.list[index].peopleNumber}}/{{juli.list[index].numberOfRegistered}}</text> 
+              </view>
+              
+            </view>
+            <view class="erlinghang">
+              <text>{{util.subTime(juli.list[index].startTime)}}</text> 
+              <text>{{juli.list[index].locationName}}</text>
+            </view>
+            
+          </view>
+
+          
+        </view>
+         </scroll-view>
+      </swiper-item>
+    
+    </swiper>
+
+    
+    <image src="/images/笔.png" class="bi" bindtap="tap2">
+    </image>
+   </view>
+
+
+
+
+
+
+
+
+  </view>
+
+
+
+
+

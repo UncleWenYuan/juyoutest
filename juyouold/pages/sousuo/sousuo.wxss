@@ -1,0 +1,176 @@
+/* pages/sousuo/sousuo.wxss */
+
+.columnPage
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  background:white;
+}
+
+.shangbanbufen
+{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  
+  
+  
+}
+
+.qingshuruhang{
+
+  
+  display: flex;
+flex-direction: row;
+width: 90%;
+height: 130rpx;
+align-items: center;
+justify-content: space-around;
+
+
+}
+
+.search_arr {
+  
+  width: 87%;
+  height: 70rpx;
+  border-radius: 30rpx;
+  margin-left: 0rpx;
+  margin-right: 19rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F0F0F0;
+  
+}
+.search_arr input{
+  margin-left: 20rpx;
+height: 60rpx;
+border-radius: 5px;
+font-size: 30rpx;
+
+}
+.search_arr icon{
+  /* margin-left: 90rpx; */
+  margin-top: 2rpx;
+  margin-left: 30rpx;
+  margin-right: 10rpx;
+  
+  
+  
+  
+}
+
+
+.xx{
+  font-size: 20rpx;
+}
+
+.bg{
+  background-color: #F0F0F0;
+  height: 30rpx;
+  width: 100%;
+}
+.xiabanbufen
+{
+
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.gengduohang{
+  display: flex;
+flex-direction: row;
+width: 90%;
+height: 40rpx;
+align-items: center;
+justify-content: start;
+margin-bottom: 20rpx;
+
+}
+
+
+.jiahao{
+  width: 20rpx;
+height: 20rpx;
+margin-left: 10rpx;
+margin-top: 0rpx;
+
+}
+.gengduo{
+  font-size: 25rpx;
+  margin-left: 20rpx;
+  color: #28A9FA;
+}
+.lishihang{
+  display: flex;
+width: 90%;
+height: 90rpx;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+border-bottom: 2rpx solid #F0F0F0;
+
+
+}
+
+image{
+  width: 40rpx;
+  height:40rpx;
+}
+
+.zuoban{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 29%;
+}
+.lajitong{
+  margin-top: 1rpx;
+}
+text{
+  font-size: 30rpx;
+}
+
+.lishiduohang{
+  width:90%;
+  height: 91%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-start;
+  margin-top: 30rpx;
+  align-content: flex-start
+}
+
+.item{
+
+  margin: 15rpx;
+  padding-left: 18rpx;
+  padding-right: 18rpx;
+  padding-top: 6rpx;
+  padding-bottom: 8rpx;
+  background: #28A9FA;
+  border-radius: 25rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.myText{
+  font-size: 25rpx;
+  color: white;
+  text-align: center;
+}

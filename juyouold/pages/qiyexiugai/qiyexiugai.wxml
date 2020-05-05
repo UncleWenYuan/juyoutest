@@ -1,0 +1,77 @@
+
+  <view class="shang" >
+<!-- 1 -->
+
+    <view class="liufenzhiyi">
+      
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png" class="xinghao"></image>
+            <text class="xingbie">公司名称</text>
+          </view>  
+          
+          <view class="youban" >
+            <input maxlength="6" placeholder="请输入您的公司名称" bindinput="xingming" ></input>
+            
+          </view>
+        </view>
+       
+
+  
+      </view>
+  <!-- 2 -->
+
+  <view class="liufenzhiyi">
+      
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png" class="xinghao"></image>
+            <text class="xingbie">税号</text>
+          </view>  
+          
+          <view class="youban" >
+            <input type="text" maxlength="11" placeholder="请输入您的公司税号" bindinput="dianhua"></input>
+            
+          </view>
+        </view>
+       
+
+  
+      </view>
+ 
+  <!-- 5 -->
+
+    <view class="sanfenzhiyi">
+      <view class="shenfenzhao">
+        <view class="shenfenshang">
+          <image src="{{zhengmianUrl}}" class="tupianwei" bindtap="zhengmian"></image>
+        </view>
+        <view class="shenfenxia">
+          上传营业执照
+        </view>
+      </view>
+      <view class="shenfenzhao">
+        <view class="shenfenshang">
+          <image src="{{fanmianUrl}}" class="tupianwei" bindtap="fanmian"></image>
+        </view>
+        <view class="shenfenxia">
+          上传名片
+        </view>
+      </view>
+        
+    </view>
+  <!-- 6 -->
+
+  
+      
+       
+       
+
+   
+</view>
+  <view class="xia">
+    <view class="background" bindtap="baocun">
+      <view class="fabu">重新认证</view>
+    </view>
+  </view>
+

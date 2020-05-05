@@ -1,0 +1,417 @@
+.pageColumn{
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F0F0F0;
+}
+
+.shang{
+  background-color: white; 
+  height: 54.333%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.newPart{
+  background-color: white; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+height: 41.2%;
+/* font-size: 26rpx; */
+
+}
+.zhong{
+  background-color: white; 
+  height: 35%;
+  width:100%;
+  
+}
+.xia{
+  background-color: white; 
+  height: 7.3%;
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+
+}
+.zuiyihang{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7rpx;
+  margin-bottom: 7rpx;
+  width: 90%;
+}
+
+.font{
+  font-size: 27rpx;
+  letter-spacing: 1rpx;
+}
+image{
+  width: 50rpx;
+  height: 50rpx;
+
+}
+
+.border{
+  border-radius: 25rpx;
+}
+.tu{
+  
+  border-radius: 30rpx;
+}
+.banner{
+  width: 100%;
+  height: 58.8%;
+}
+.youban{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  
+  width:40%;
+  position: relative;
+  align-items: center;
+
+}
+.renshuhang{
+  width: 90%;
+font-size: 26rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 30rpx */
+
+}
+.juzhong{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 90%;
+  text-align: left;
+  margin-top: 3rpx;
+  font-size: 26rpx;
+  
+}
+
+.renshuzuoban{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color:red;
+}
+.riqi{
+  width: 100%;
+  margin-top: 10rpx;
+
+
+}
+.didian{
+  overflow : hidden;
+  width: 50%;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all; /* 追加这一行代码 */
+
+}
+.zuiyihang{
+  font-size: 26rpx;
+  height:70rpx;
+}
+.zuiyijiangnan{
+  width: 50%;letter-spacing: 1rpx;
+  font-weight: 600;
+  font-size: 28rpx;
+  overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all; /* 追加这一行代码 */
+}
+.faqiren{
+  margin-left: 17rpx;
+  font-size: 26rpx;
+  overflow : hidden;
+  width: 190rpx;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all; /* 追加这一行代码 */
+}
+.ershi{
+  margin-left: 10rpx;
+  margin-right: 1rpx;
+  font-size: 26rpx;
+
+}
+.kuohao{
+  margin-left: 40rpx;
+  /* color: red; */
+  font-size: 26rpx;
+}
+
+.renshuyouban{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30%;
+}
+
+.jiantou{
+  width: 10rpx;
+  height: 20rpx;
+  margin-left: 20rpx;
+}
+
+.disanceng{
+  position: relative;
+  right: -30rpx;
+  z-index: 1;
+   width: 60rpx;
+  height: 60rpx;
+
+}
+.dierceng{
+  position: relative;
+  right: -15rpx;
+  z-index: 2;
+   width: 60rpx;
+  height: 60rpx;
+
+}
+.diyiceng{
+ right: 60rpx;
+ z-index: 3;
+
+  width: 60rpx;
+  height: 60rpx;
+  
+}
+.bi{
+  position: fixed;
+  bottom: 200rpx;
+  right: 50rpx;
+  width:62px;
+
+  height:62px;
+}
+.zhong{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.swiper-tab {
+ 
+display: flex;
+ 
+flex-direction: row;
+
+width: 80%;
+height:15%;
+ margin-top: 2%;
+ justify-content: space-around;
+/* border-bottom: 2rpx solid #777; */
+ 
+}
+ 
+.tab-item {
+ 
+  width: 25%;
+  height: 90%;
+  
+  text-align: center;
+  
+  font-size: 26rpx;
+  margin-top: 0%;
+  margin-bottom: 0rpx;
+  color: rgb(0, 0, 0);
+ 
+}
+ 
+ .on {
+
+  border-bottom: 5rpx solid #28A9FA ;
+  color: #28A9FA;
+
+}
+.swiper {
+ 
+  height:85%;
+  width: 100%;
+  background: #FFFFFF;
+  font-size: 26rpx;
+ 
+}
+
+.zuixin{ 
+   /* 整个最新里的内容 */
+  display: flex;
+ 
+  flex-direction: column;
+ justify-content: space-around;
+  width: 100%;
+  height: 100%;
+ 
+  align-items: center;
+}
+.zuixinneirong{
+  /* 最新里的一半 */
+  width: 95%;
+  height : 47%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+ 
+  border-bottom: 1rpx solid rgb(168, 167, 167);
+  
+}
+.tupianbufen{
+  width: 100%;
+  height : 70%;
+ 
+}
+/* .shangceng{
+  
+  z-index: 2;
+  height:60%;
+  width: 60%;
+  margin:2%;
+
+} */
+.xiaceng{
+  
+  /* z-index: 1;  */
+   height:100%;
+  width: 100%;
+}
+
+.waitanhang{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 15%;
+  width:100%;
+  margin-top: 1%;
+}
+.liuyan2{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.shiba{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width:17%;
+}
+.rentubiao{
+    width:28rpx;
+  height:30rpx;
+  margin-top: 4%;
+  margin-right: 4%;
+}
+
+.erlinghang{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+  width:100%;
+  color: grey;
+  
+}
+.sanfenzhiyi{
+  display: flex;  
+  flex-direction: column;
+  justify-content: start;
+  align-items:flex-start;
+  
+}
+.diyikuai{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: start;
+  width: 100%;
+  margin-top: 30rpx;
+
+}
+.section{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+
+}
+.xingbie{
+  margin-left: 20rpx;
+  color:#9f9c9d;
+  
+  font-size: 27rpx;
+
+  
+}
+.nv{
+  
+  margin-left: 90rpx;
+  color:#656565;
+  font-size: 28rpx;
+
+}
+
+.xiazuo{
+  background: #28A9FA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+.xiayou{
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+}
+.liuyan{
+  color: white;
+  font-size: 35rpx;
+
+}
+.woyaobaoming{
+  
+  font-size: 35rpx;
+}

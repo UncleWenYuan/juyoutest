@@ -1,0 +1,28 @@
+<view class="columnPage">
+
+  <view class="shang">
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name" class="temp">
+      <view class="picker" wx:if="{{start==1}}">
+        {{multiArray[0][multiIndex[0]].name}}，{{multiArray[1][multiIndex[1]].name}}，{{multiArray[2][multiIndex[2]].name}}
+      </view>
+      <view class="picker off" wx:if="{{start==0}}">
+      省份，城市，区县
+      </view>
+    </picker> 
+
+
+    <view class="temp temp2">
+    
+      <input placeholder="详细地址，如街道、楼牌号等" class="input" bindinput="input" maxlength="20"></input>
+    </view>
+
+  </view>
+  <view class="xia">
+    <view class="background" bindtap="baocun">
+      <view class="fabu">保存</view>
+    </view>
+  </view>
+
+
+</view>
+

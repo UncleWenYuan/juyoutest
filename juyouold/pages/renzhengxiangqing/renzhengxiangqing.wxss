@@ -1,0 +1,67 @@
+.columnPage{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-size: 26rpx;
+
+}
+.section{
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1rpx solid #f0f0f0;
+
+}
+.tupian{
+ width: 40rpx;
+ height: 40rpx; 
+}
+.icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+}
+.name{
+  width: 65%;
+}
+.state{
+  width: 20%;
+}
+.xia{
+  width: 100%;
+  margin-top: 600rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.background{
+  margin-top:0rpx;
+  width: 600rpx;
+  height: 75rpx;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #28A9FA;
+}
+
+.fabu{
+  color: white;
+  font-size: 30rpx;
+  letter-spacing: 10rpx;
+}

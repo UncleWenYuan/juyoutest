@@ -1,0 +1,50 @@
+<!--pages/sousuo/sousuo.wxml-->
+
+<view class="columnPage">
+
+    <view class='shangbanbufen' >
+
+      <view class="qingshuruhang">
+        <view class="search_arr">
+          <icon class="searchcion" size='20' type='search'></icon>
+          <input class="xx" auto-focus  resize="true" placeholder="请输入搜索关键词" value="{{searchValue}}"  maxlength="10"  bindconfirm="bindInput" bindblur="bindBlur"/>
+        </view>
+
+        <text bindtap="quxiaoTap">取消</text>
+      
+      </view>
+
+      <view class="gengduohang">
+        <image class="jiahao" src="/images/加号.png"></image>
+        <text class="gengduo" bindtap="tapFunction">按类型搜索</text>
+      </view>
+      
+
+
+      
+        
+      
+    </view>
+    <view class="bg"></view>
+
+    <view class='xiabanbufen' >
+      <view class='lishihang'>
+
+        <view class="zuoban">
+          <image src="/images/历史记录图标@3x.png"></image>
+          <text>历史搜索</text>
+        </view>
+        <image class="lajitong" src="/images/删除@3x.png" bindtap="taplaji"></image>
+      
+      </view>
+      <view class='lishiduohang'>
+        <view class="item" wx:for="{{lishijilu}}" wx:for-index="index" wx:for-item="item" wx:key="key" wx:if="{{index<10}}" bindtap="tap" data-name="{{item.data}}">
+          <text class="myText">{{item.data}}</text>
+        </view>
+
+      </view>
+
+    </view>
+
+
+</view>

@@ -1,0 +1,56 @@
+  <view class="columnPage">
+    <view class="shang">
+      <image src="/images/头像装饰.png" class="touxiang" bindtap="touxiang">
+      
+        <image src="{{touxiangUrl}}" class="avatar"></image>
+      
+      </image>
+      
+    </view>
+    <view class="zhong">
+      <view class="wufenzhiyi">
+        <view class="zuo">
+          <view class="wenzi">昵称</view>
+        </view>
+        <view class="you">
+          <input class="wenzi" placeholder="填写昵称"  placeholder-class="placeholder" bindinput="xingming" value="{{xingming}}"></input>
+        </view>
+      </view>
+      <view class="wufenzhiyi">
+        <view class="zuo">
+          <view class="wenzi">性别</view>
+        </view>
+        <view class="you">
+          <view class="nv"bindtap="nv">
+            <image src="/images/选中状态@3x.png" class="dian" wx:if="{{isMale==0}}"></image>
+            <image src="/images/未选中状态@3x.png" class="dian" wx:if="{{isMale==1}}"></image>
+            <view class="nannv" >女</view>
+          </view>
+          <view class="nan"bindtap="nan">
+            <image src="/images/选中状态.png" class="dian" wx:if="{{isMale==1}}"></image>
+            <image src="/images/未选中状态.png" class="dian"wx:if="{{isMale==0}}"></image>
+            <view class="nannv" >男</view>
+          </view>
+        </view>
+      </view>
+      <view class="wufenzhiyi">
+        <view class="zuo">
+          <view class="wenzi">出生年月</view>
+        </view>
+        <view class="you">
+        <picker bindchange="bindDateChange1"  mode="date" class="wenzi {{on1==0?'grey':''}}" value="{{date1}}">
+        {{date1}}
+        </picker>
+        </view>
+      </view>
+    
+      
+    </view>
+    
+    <view class="xia">
+      <view class="background" bindtap="baocun">
+        <view class="fabu">保存</view>
+      </view>
+    </view>
+  </view>
+  

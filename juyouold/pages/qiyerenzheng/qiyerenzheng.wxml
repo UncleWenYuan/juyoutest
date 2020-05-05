@@ -1,0 +1,181 @@
+<view class="columnPage">
+
+  <view class="shang" wx:for="{{arrayList}}" wx:key="key"  >
+<!-- 1 -->
+
+    <view class="liufenzhiyi">
+      
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png" class="xinghao"></image>
+            <text class="xingbie">公司名称</text>
+          </view>  
+          
+          <view class="youban" >
+            <view >{{item.companyName}}</view>
+            
+          </view>
+        </view>
+       
+
+  
+      </view>
+  <!-- 2 -->
+
+  <view class="liufenzhiyi">
+      
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png" class="xinghao"></image>
+            <text class="xingbie">税号</text>
+          </view>  
+          
+          <view class="youban" >
+            <view>{{item.dutyParagraph}}</view>
+            
+          </view>
+        </view>
+       
+
+  
+      </view>
+ 
+  <!-- 5 -->
+
+    <view class="sanfenzhiyi">
+      <view class="shenfenzhao">
+        <view class="shenfenshang">
+          <image  src="{{item.businessLicenseImageUrl}}"  class="tupianwei"  data-index="{{index}}"></image>
+        </view>
+        <view class="shenfenxia">
+          上传营业执照
+        </view>
+      </view>
+      <view class="shenfenzhao">
+        <view class="shenfenshang">
+          <image src="{{item.businessCardImageUrl}}" class="tupianwei" data-index="{{index}}"></image>
+        </view>
+        <view class="shenfenxia">
+          上传名片
+        </view>
+      </view>
+        
+    </view>
+  <!-- 6 -->
+
+  
+      
+       
+       <view style="width:90%;font-size:26rpx; text-align:start; color:#28A9FA; margin-top:10rpx;" wx:if="{{item.state=='awaiting_audit'||item.state=='audit_reject'}}" bindtap="xiugai" data-id="{{item.id}}">重新认证</view>
+
+   
+</view>
+
+  <view class="shang" wx:for="{{counter}}" wx:key="key" wx:if="{{index<allowNum}}" >
+<!-- 1 -->
+
+    <view class="liufenzhiyi">
+      
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png" class="xinghao"></image>
+            <text class="xingbie">公司名称</text>
+          </view>  
+          
+          <view class="youban" >
+            <input maxlength="6" placeholder="请输入您的公司名称" bindinput="xingming" data-index="{{index}}"></input>
+            
+          </view>
+        </view>
+       
+
+  
+      </view>
+  <!-- 2 -->
+
+  <view class="liufenzhiyi">
+      
+        <view class="section">
+          <view class="zuoban">
+            <image src="/images/星号.png" class="xinghao"></image>
+            <text class="xingbie">税号</text>
+          </view>  
+          
+          <view class="youban" >
+            <input type="text" maxlength="11" placeholder="请输入您的公司税号" bindinput="dianhua" data-index="{{index}}"></input>
+            
+          </view>
+        </view>
+       
+
+  
+      </view>
+ 
+  <!-- 5 -->
+
+    <view class="sanfenzhiyi">
+      <view class="shenfenzhao">
+        <view class="shenfenshang">
+          <image src="{{zhengmianUrl[index]}}" class="tupianwei" bindtap="zhengmian" data-index="{{index}}"></image>
+        </view>
+        <view class="shenfenxia">
+          上传营业执照
+        </view>
+      </view>
+      <view class="shenfenzhao">
+        <view class="shenfenshang">
+          <image src="{{fanmianUrl[index]}}" class="tupianwei" bindtap="fanmian" data-index="{{index}}"></image>
+        </view>
+        <view class="shenfenxia">
+          上传名片
+        </view>
+      </view>
+        
+    </view>
+  <!-- 6 -->
+
+  
+      
+       
+       
+
+   
+</view>
+
+  <view class="shang shang2">
+<!-- 1 -->
+
+  
+
+ 
+ 
+  <!-- 5 -->
+
+   
+  <!-- 6 -->
+
+  <view class="tianjiahang" >
+    <view class="jiahao">
+      <image src="/images/加号.png"></image>
+    </view>
+    <view class="tianjia" bindtap="tianjiaTap">添加公司</view>
+  </view>
+
+  
+      
+       
+       
+
+   
+</view>
+  
+
+  <view class="xia">
+    <view class="background" bindtap="baocun">
+      <view class="fabu">继续</view>
+    </view>
+  </view>
+
+
+
+</view>

@@ -1,0 +1,20 @@
+<view class="pageColumn">
+  <view class="sanfenzhiyi" wx:for="{{list}}" wx:for-index="ind" wx:key="key">
+    <view class="diyihang" bindtap="tap" data-index="{{ind}}" data-id="{{item.id}}">
+      <view class="zuoban">
+        {{item.name}}
+      </view>
+      
+      <image class="image2" src="/images/完成.png" wx:if="{{selectedList[ind]!=0}}"></image>
+      <image class="image2" src="/images/未完成.png" wx:if="{{selectedList[ind]==0}}"></image>
+      
+    </view>
+    <view class="dierhang">
+      <view class="huizi">
+      {{item.describe}}
+      </view>
+    </view>
+  </view>
+  <view class="shengxia"></view>
+  
+</view>

@@ -1,0 +1,44 @@
+<view class="columnPage">
+  <view class="shangban">
+    <view class="sanfenzhiyi" bindtap="tapFunction1">
+      <view class="zuoban">
+        <text class="xiaoziti">宣传体验</text>
+
+        <text class="daziti" wx:if="{{xuanchuan!=''}}">{{xuanchuan}}</text>
+        <text class="daziti" wx:if="{{xuanchuan==''}}">全部</text>
+      </view>
+      <image src="/images/箭头.png" class="youban">
+        
+      </image>
+
+    </view>
+    <view class="sanfenzhiyi" bindtap="tapFunction2">
+      <view class="zuoban">
+        <text class="xiaoziti">志愿招募</text>
+        <text class="daziti" wx:if="{{zhiyuan!=''}}">{{zhiyuan}}</text>
+        <text class="daziti" wx:if="{{zhiyuan==''}}">全部</text>
+      </view>
+      <image src="/images/箭头.png" class="youban">
+        
+      </image>
+
+    </view>
+    <view class="sanfenzhiyi" bindtap="tapFunction3">
+      <view class="zuoban">
+        <text class="xiaoziti">社交活动</text>
+        <text class="daziti" wx:if="{{shejiao!=''}}">{{shejiao}}</text>
+        <text class="daziti" wx:if="{{shejiao==''}}">全部</text>
+      </view>
+      <image src="/images/箭头.png" class="youban">
+        
+      </image>
+
+    </view>
+  </view>
+  
+  <view class="xiaban">
+    <view class="item" bindtap="sousuotap">
+      <text class="sousuo">搜 索</text>
+    </view>
+  </view>
+</view>

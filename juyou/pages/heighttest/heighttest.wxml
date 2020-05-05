@@ -1,0 +1,4 @@
+
+
+
+<view class="pageCo" style="height:{{height}}rpx; border:solid 10rpx red;"></view>

@@ -1,0 +1,297 @@
+.columnPage{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #F0F0F0;
+}
+
+.shang{
+  width: 100%;
+  height: 350rpx;
+  background-color: white;
+  margin-bottom: 20rpx;
+  border-top: 1rpx solid rgb(153, 149, 149);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.zhong{
+  background-color: white;
+  height: 900rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.xia{
+  height :500rpx;
+  width: 100%;
+  background-color: white;
+  margin-top: 30rpx;
+
+}
+
+.background{
+  margin-top: 120rpx;
+  margin-bottom: 50rpx;
+  width: 600rpx;
+  height: 80rpx;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #28A9FA;
+}
+
+.fabu{
+  color: white;
+  font-size: 30rpx;
+}
+
+.liufenzhiyi{
+  width: 100%;
+  height: 16.66667%;
+  border-bottom: 2rpx solid #F0F0F0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.tupianhang{
+  height: 66.66666%;
+  width: 100%;
+  border-bottom: 1rpx solid #F0F0F0;
+
+}
+.qingshuhang{
+  height: 33.3333%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.tupianwei{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.input{
+  width: 90%;
+   font-size: 30rpx;
+   
+ 
+ 
+}
+.textArea{
+  width: 100%;
+  height: 100%;
+  word-break: break-all;
+  font-size: 30rpx;
+}
+
+
+image{
+  width: 10rpx;
+  height: 10rpx;
+}
+.zhongjian{
+  width: 80%;
+}
+.zhongjian2
+{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ 
+  
+
+}
+.section{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color{
+  color: #999999;
+}
+
+text{
+  font-size: 30rpx;
+  letter-spacing: 0rpx;
+}
+.image2{
+  width:20rpx;
+  height: 20rpx;
+  
+}
+.ziti{
+  font-size: 28rpx;
+  letter-spacing: 1rpx;
+}
+.numberInput{
+  width: 20%;
+}
+
+.erfenzhiyi{
+  height: 50%;
+  width: 100%;
+  border-bottom: 1rpx solid #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.qingshururenwushuoming{
+  margin-top: 30rpx;
+  width: 80%;
+  font-size: 30rpx;
+}
+
+.bashi{
+  width: 80%;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.jihao{
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 20rpx;
+}
+.lanzi{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+color: #28A9FA;
+}
+.youban{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  font-size: 28rpx;
+}
+.margin{
+  margin-left: 10rpx;
+  margin-bottom: 3rpx;
+}
+
+.zhong2{
+  width: 100%;
+  height: 220rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  margin-top: 30rpx;
+}
+.liufenzhiyi2{
+  width: 100%;
+  height: 116.6666rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #F0F0F0;
+  background-color: white;
+}
+
+.section2{
+  
+  
+  width: 100%;
+  margin-top: 32rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.pick2{
+  width:100%;
+  height: 100%;
+}
+.zuoban2
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  margin-left: 50rpx;
+
+}
+.color2{
+  color: #999999;
+  
+}
+
+.xingbie2{
+  margin-left: 15rpx;
+}
+
+.youban2{
+
+  height: 100%;
+  margin-right: 50rpx;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+
+}
+.youjian2{
+  width: 10rpx;
+  height: 20rpx;
+  margin-left: 15rpx;
+  
+}
+.margin2{
+  margin-left: 10rpx;
+  margin-bottom: 3rpx;
+}
+
+.tianjiafujian{
+  width: 80%;
+  margin-top: 35rpx;
+}
+.fujianrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 80%;
+  
+  margin-top: 30rpx;
+}
+.jiahao{
+  width: 30rpx;
+  height: 30rpx;
+
+}
+.fujiantubiao{
+  width: 44rpx;
+  height: 35rpx;
+  margin-left: 24rpx;
+}

@@ -1,0 +1,21 @@
+<view class="columnPage">
+  <view class="section">
+    <view class="border">
+    <view class="biaoti">联系电话</view></view>
+    <view class="neirong"  bindtap="dadianhua">
+    
+      <view class="juti">{{number}}</view>
+    </view>
+  
+  </view>
+  <view class="section">
+    <view class="border">
+    <view class="biaoti">联系邮箱</view></view>
+    <view class="neirong">
+    
+      <view class="juti">123132133@live.cn</view>
+    </view>
+  
+  </view>
+
+</view>
